@@ -10,3 +10,5 @@ pnpm-debug.log*
 .DS_Store
 dist
 .vercel
+.playwright-cli
+.playwright-mcp

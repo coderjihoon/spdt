@@ -1,0 +1,300 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e3]:
+    - link "A premium SaaS template · View all templates" [ref=e5] [cursor=pointer]:
+      - /url: https://www.framer.com/@bryn-taylor/?tab=templates&via=bryn
+      - paragraph [ref=e7]:
+        - text: A premium SaaS template ·
+        - strong [ref=e8]: View all templates
+    - navigation [ref=e12]:
+      - navigation [ref=e13]:
+        - generic [ref=e14]:
+          - img "Logo link" [ref=e16] [cursor=pointer]:
+            - img [ref=e18]
+          - generic [ref=e20]:
+            - link "Features" [ref=e22] [cursor=pointer]:
+              - /url: ./features
+              - generic [ref=e24]: Features
+            - link "Pricing" [ref=e27] [cursor=pointer]:
+              - /url: ./pricing
+              - generic [ref=e29]: Pricing
+            - link "Blog" [ref=e32] [cursor=pointer]:
+              - /url: ./blog
+              - generic [ref=e34]: Blog
+            - link "About" [ref=e37] [cursor=pointer]:
+              - /url: ./about
+              - generic [ref=e39]: About
+            - link "Contact" [ref=e42] [cursor=pointer]:
+              - /url: ./contact
+              - generic [ref=e44]: Contact
+        - generic [ref=e46]:
+          - link "Log in" [ref=e48] [cursor=pointer]:
+            - /url: ./login
+            - generic [ref=e50]: Log in
+          - link "Get started Pattern background" [ref=e53] [cursor=pointer]:
+            - /url: ./pricing
+            - img [ref=e57]
+            - generic [ref=e60]: Get started
+            - img [ref=e64]
+            - img "Pattern background" [ref=e68]
+    - banner [ref=e69]:
+      - generic [ref=e70]:
+        - heading "Streamline your growing startup" [level=1] [ref=e72]
+        - paragraph [ref=e74]: Say goodbye to admin headaches and say hello to efficiency. Onboard your employees in minutes, track company projects, and manage team performance. We’ve got you covered.
+        - generic [ref=e75]:
+          - link "Get started Pattern background" [ref=e78] [cursor=pointer]:
+            - /url: ./pricing
+            - img [ref=e82]
+            - generic [ref=e85]: Get started
+            - img [ref=e89]
+            - img "Pattern background" [ref=e93]
+          - link "Learn more Pattern background" [ref=e96] [cursor=pointer]:
+            - /url: ./#learn
+            - img [ref=e100]
+            - generic [ref=e103]: Learn more
+            - img [ref=e107]
+            - img "Pattern background" [ref=e111]
+      - img "Wedge Webflow template product image" [ref=e115]
+    - generic [ref=e125]:
+      - heading "Trusted by 8,000 leading companies" [level=2] [ref=e128]
+      - list [ref=e132]:
+        - listitem [ref=e133]:
+          - img [ref=e135] [cursor=pointer]:
+            - img [ref=e137]
+        - listitem [ref=e139]:
+          - img [ref=e141] [cursor=pointer]:
+            - img [ref=e143]
+        - listitem [ref=e145]:
+          - img [ref=e147] [cursor=pointer]:
+            - img [ref=e149]
+        - listitem [ref=e151]:
+          - img [ref=e153] [cursor=pointer]:
+            - img [ref=e155]
+        - listitem [ref=e157]:
+          - img [ref=e159] [cursor=pointer]:
+            - img [ref=e161]
+    - generic [ref=e167]:
+      - heading "Wedge is built for you" [level=2] [ref=e169]
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - img [ref=e174]
+          - generic [ref=e176]:
+            - heading "Streamline your work" [level=3] [ref=e178]
+            - paragraph [ref=e180]: Efficiency starts here. Streamline your work with our project tracking features. Simplify tasks and maximise productivity.
+        - generic [ref=e181]:
+          - img [ref=e184]
+          - generic [ref=e186]:
+            - heading "Works with your favourite tools" [level=3] [ref=e188]
+            - paragraph [ref=e190]: Integrate quickly and directly with your tools you already love. It’s as easy as 1, 2, 3.
+        - generic [ref=e191]:
+          - img [ref=e194]
+          - generic [ref=e196]:
+            - heading "Save hours every week" [level=3] [ref=e198]
+            - paragraph [ref=e200]: Unlock more time for what matters. Save hours every week with Slice. Optimise your workflow and reclaim your time.
+    - generic [ref=e201]:
+      - generic [ref=e202]:
+        - generic [ref=e204]:
+          - heading "Easy admin" [level=2] [ref=e206]
+          - heading "Take the pain out of company admin" [level=3] [ref=e208]
+          - paragraph [ref=e210]: Eliminate the hassle, nobody wants it. Take the pain out of company admin with our all-in-one platform. Simplify projects and focus on what really drives your business forward.
+        - img "Wedge Webflow template product image" [ref=e214]
+      - generic [ref=e215]:
+        - img "Wedge Webflow template product image" [ref=e219]
+        - generic [ref=e221]:
+          - heading "Ready for scale" [level=2] [ref=e223]
+          - heading "Grows with your business" [level=3] [ref=e225]
+          - paragraph [ref=e227]: Now you can grow confidently, nothing holding you back. Our platform grows as you grow. Adapting to your needs. Scale from a pre-seed startup to public company with Wedge.
+      - generic [ref=e228]:
+        - generic [ref=e230]:
+          - heading "Central platform" [level=2] [ref=e232]
+          - heading "Manage your team in one place" [level=3] [ref=e234]
+          - paragraph [ref=e236]: Centralise your team management. Manage your entire team in one tool. Easy communication, project management, and smooth collaboration with your team.
+        - img "Wedge Webflow template product image" [ref=e240]
+    - generic [ref=e243]:
+      - heading "What our customers say" [level=2] [ref=e245]
+      - generic [ref=e246]:
+        - generic [ref=e247]:
+          - generic [ref=e248]:
+            - generic [ref=e249]:
+              - img [ref=e253]
+              - img [ref=e258]
+              - img [ref=e263]
+              - img [ref=e268]
+              - img [ref=e273]
+            - paragraph [ref=e276]: Wedge has revolutionized the way our team collaborates. With its user-friendly interface and powerful features, it's become an indispensable tool in our daily workflow.
+            - generic [ref=e280]:
+              - paragraph [ref=e282]: Marcus Johnson
+              - paragraph [ref=e284]: Nexa
+          - generic [ref=e285]:
+            - generic [ref=e286]:
+              - img [ref=e290]
+              - img [ref=e295]
+              - img [ref=e300]
+              - img [ref=e305]
+              - img [ref=e310]
+            - paragraph [ref=e313]: I can't say enough good things about Wedge. From its seamless integration with our existing tools to its robust task management features, it's transformed the way we work. What used to be a tangled web of emails and spreadsheets is now a well-oiled machine, thanks to Wedge.
+            - generic [ref=e317]:
+              - paragraph [ref=e319]: Samantha Rodriguez
+              - paragraph [ref=e321]: Swiftify
+        - generic [ref=e322]:
+          - generic [ref=e323]:
+            - generic [ref=e324]:
+              - img [ref=e328]
+              - img [ref=e333]
+              - img [ref=e338]
+              - img [ref=e343]
+              - img [ref=e348]
+            - paragraph [ref=e351]: As a remote team, Wedge has been a game-changer for us. Its communication features keep us connected and organized, no matter where we are.
+            - generic [ref=e355]:
+              - paragraph [ref=e357]: Emily Chang
+              - paragraph [ref=e359]: Luminate
+          - generic [ref=e360]:
+            - generic [ref=e361]:
+              - img [ref=e365]
+              - img [ref=e370]
+              - img [ref=e375]
+              - img [ref=e380]
+              - img [ref=e385]
+            - paragraph [ref=e388]: Thanks to Wedge, we've seen a significant increase in productivity. Its seamless integration with our existing tools has streamlined our processes and saved us valuable time.
+            - generic [ref=e392]:
+              - paragraph [ref=e394]: Alexander Patel
+              - paragraph [ref=e396]: Vexa
+          - generic [ref=e397]:
+            - generic [ref=e398]:
+              - img [ref=e402]
+              - img [ref=e407]
+              - img [ref=e412]
+              - img [ref=e417]
+              - img [ref=e422]
+            - paragraph [ref=e425]: Wedge streamlines teamwork like never before. It's a must-have for any modern workplace.
+            - generic [ref=e429]:
+              - paragraph [ref=e431]: Xavier Carter
+              - paragraph [ref=e433]: Cucumber
+        - generic [ref=e434]:
+          - generic [ref=e435]:
+            - generic [ref=e436]:
+              - img [ref=e440]
+              - img [ref=e445]
+              - img [ref=e450]
+              - img [ref=e455]
+              - img [ref=e460]
+            - paragraph [ref=e463]: Before discovering Wedge, managing our team felt like herding cats. We were using multiple platforms for communication, project management, and file sharing, Enter Wedge, and suddenly everything fell into place. Its intuitive interface and all-in-one functionality have made our workflow smoother than ever.
+            - generic [ref=e467]:
+              - paragraph [ref=e469]: Olivia Thompson
+              - paragraph [ref=e471]: Glassi
+          - generic [ref=e472]:
+            - generic [ref=e473]:
+              - img [ref=e477]
+              - img [ref=e482]
+              - img [ref=e487]
+              - img [ref=e492]
+              - img [ref=e497]
+            - paragraph [ref=e500]: Wedge is simply amazing. It's intuitive, efficient, and keeps our team on track.
+            - generic [ref=e504]:
+              - paragraph [ref=e506]: Isabella Ramirez
+              - paragraph [ref=e508]: Edge
+    - generic [ref=e511]:
+      - generic [ref=e514]:
+        - heading "Frequently asked questions" [level=2] [ref=e516]
+        - paragraph [ref=e518]:
+          - text: Have questions? We’ve got answers. For everything else email us on
+          - link "hi@email.com" [ref=e519] [cursor=pointer]:
+            - /url: mailto:hi@email.com
+          - text: .
+      - generic [ref=e521]:
+        - generic [ref=e523] [cursor=pointer]:
+          - generic [ref=e524]:
+            - heading "How does Wedge work?" [level=3] [ref=e526]
+            - img [ref=e530]
+          - paragraph [ref=e534]: Wedge is like your team's HQ. It brings all your communication, tasks, and files together in one easy-to-use place. It helps you work better together and get stuff done faster.
+        - generic [ref=e536] [cursor=pointer]:
+          - generic [ref=e537]:
+            - heading "Is my data secure?" [level=3] [ref=e539]
+            - img [ref=e543]
+          - paragraph [ref=e547]: Rest assured, we take your data security seriously. Our robust measures ensure that your information is kept safe and secure at all times.
+        - generic [ref=e549] [cursor=pointer]:
+          - generic [ref=e550]:
+            - heading "Does Wedge work well for large teams?" [level=3] [ref=e552]
+            - img [ref=e556]
+          - paragraph [ref=e560]: Certainly! Wedge is designed to scale effortlessly, making it ideal for large teams. Its flexible features and intuitive interface ensure smooth collaboration and efficient task management, no matter the size of your team.
+        - generic [ref=e562] [cursor=pointer]:
+          - generic [ref=e563]:
+            - heading "How do I create a new account?" [level=3] [ref=e565]
+            - img [ref=e569]
+          - paragraph [ref=e573]: Creating a new account with Wedge is a breeze. Simply visit our website and choose a pricing plan. Follow the prompts and you'll be up and running in no time.
+    - generic [ref=e577]:
+      - generic [ref=e578]:
+        - heading "Ready to get started?" [level=2] [ref=e580]
+        - heading "Take the first step to growing your business" [level=3] [ref=e582]
+      - link "Get started Pattern background" [ref=e584] [cursor=pointer]:
+        - /url: ./pricing
+        - img [ref=e588]
+        - generic [ref=e591]: Get started
+        - img [ref=e595]
+        - img "Pattern background" [ref=e599]
+      - img "Pattern background" [ref=e603]
+    - contentinfo [ref=e607]:
+      - generic [ref=e610]:
+        - navigation [ref=e611]:
+          - img "Logo link" [ref=e613] [cursor=pointer]:
+            - img [ref=e615]
+          - generic [ref=e617]:
+            - generic [ref=e618]:
+              - link "Home" [ref=e620] [cursor=pointer]:
+                - /url: ./
+                - generic [ref=e622]: Home
+              - link "Features" [ref=e625] [cursor=pointer]:
+                - /url: ./features
+                - generic [ref=e627]: Features
+              - link "Pricing" [ref=e630] [cursor=pointer]:
+                - /url: ./pricing
+                - generic [ref=e632]: Pricing
+              - link "Blog" [ref=e635] [cursor=pointer]:
+                - /url: ./blog
+                - generic [ref=e637]: Blog
+              - link "About" [ref=e640] [cursor=pointer]:
+                - /url: ./about
+                - generic [ref=e642]: About
+              - link "Contact" [ref=e645] [cursor=pointer]:
+                - /url: ./contact
+                - generic [ref=e647]: Contact
+              - link "Log in" [ref=e650] [cursor=pointer]:
+                - /url: ./login
+                - generic [ref=e652]: Log in
+            - generic [ref=e654]:
+              - link "Twitter" [ref=e656] [cursor=pointer]:
+                - /url: https://twitter.com/bryntaylor99
+                - generic [ref=e658]: Twitter
+              - link "Instagram" [ref=e661] [cursor=pointer]:
+                - /url: https://www.instagram.com/
+                - generic [ref=e663]: Instagram
+              - link "LinkedIn" [ref=e666] [cursor=pointer]:
+                - /url: https://linkedin.com/
+                - generic [ref=e668]: LinkedIn
+              - link "Youtube" [ref=e671] [cursor=pointer]:
+                - /url: https://www.youtube.com/
+                - generic [ref=e673]: Youtube
+            - generic [ref=e675]:
+              - link "Buy template" [ref=e677] [cursor=pointer]:
+                - /url: https://www.framer.com/marketplace/templates/wedge/?via=bryn
+                - generic [ref=e679]: Buy template
+              - link "View all templates" [ref=e682] [cursor=pointer]:
+                - /url: https://www.framer.com/@bryn-taylor/?tab=templates&via=bryn
+                - generic [ref=e684]: View all templates
+              - link "Unlimited Access templates" [ref=e687] [cursor=pointer]:
+                - /url: https://www.bryntaylor.co.uk/resources/unlimited-access
+                - generic [ref=e689]: Unlimited Access templates
+              - link "Made in Framer" [ref=e692] [cursor=pointer]:
+                - /url: https://www.framer.com?via=bryn
+                - generic [ref=e694]: Made in Framer
+              - link "Built by Bryn" [ref=e697] [cursor=pointer]:
+                - /url: https://www.bryntaylor.co.uk/
+                - generic [ref=e699]: Built by Bryn
+        - paragraph [ref=e706]: ©Wedge 2026
+    - link [ref=e710] [cursor=pointer]:
+      - /url: https://www.framer.com/marketplace/templates/wedge/?via=bryn
+      - img [ref=e713]
+  - generic:
+    - link "Create a free website with Framer, the website builder loved by startups, designers and agencies.":
+      - /url: https://www.framer.com
+      - paragraph [ref=e715] [cursor=pointer]: Create a free website with Framer, the website builder loved by startups, designers and agencies.
+  - img [ref=e745]

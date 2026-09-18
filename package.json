@@ -1,0 +1,29 @@
+{
+  "name": "spdt",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "diagnose": "tsx scripts/diagnose.ts",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.126.0",
+    "@supabase/supabase-js": "^2.116.0",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "sharp": "^0.35.4"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "tailwindcss": "latest",
+    "tsx": "^4.23.13",
+    "typescript": "latest"
+  }
+}

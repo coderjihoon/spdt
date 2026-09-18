@@ -1,0 +1,330 @@
+- generic [active] [ref=e1]:
+  - main [ref=e2]:
+    - generic [ref=e4]:
+      - link "SP SPDT" [ref=e5] [cursor=pointer]:
+        - /url: "#"
+        - generic [ref=e6]: SP
+        - paragraph [ref=e8]: SPDT
+      - link "무료 진단 문의하기" [ref=e9] [cursor=pointer]:
+        - /url: mailto:hello@spdt.studio?subject=무료%20진단%20문의
+    - generic [ref=e12]:
+      - generic [ref=e13]:
+        - generic [ref=e14]: DETAIL PAGE STRATEGY STUDIO
+        - heading "예쁜 상세페이지가 아니라, 팔리는 이유가 보이는 상세페이지를 만듭니다." [level=1] [ref=e15]:
+          - text: 예쁜 상세페이지가 아니라,
+          - text: 팔리는 이유가 보이는 상세페이지를 만듭니다.
+        - paragraph [ref=e16]: 제품의 강점, 고객의 고민, 구매 망설임을 분석해 구매 흐름에 맞는 상세페이지를 기획하고 디자인합니다.
+        - generic [ref=e17]:
+          - link "무료 진단 문의하기" [ref=e18] [cursor=pointer]:
+            - /url: mailto:hello@spdt.studio?subject=무료%20진단%20문의
+          - link "포트폴리오 보기" [ref=e19] [cursor=pointer]:
+            - /url: "#portfolio"
+        - generic [ref=e20]:
+          - generic [ref=e21]: 기획
+          - generic [ref=e22]: 카피
+          - generic [ref=e23]: 디자인
+          - generic [ref=e24]: 전환 흐름
+      - generic [ref=e28]:
+        - generic [ref=e29]:
+          - generic [ref=e30]:
+            - generic [ref=e31]:
+              - paragraph [ref=e32]: Preview
+              - paragraph [ref=e33]: 상세페이지 리빌드
+            - generic [ref=e34]: Premium Flow
+          - generic [ref=e36]:
+            - generic [ref=e37]:
+              - generic [ref=e38]:
+                - paragraph [ref=e39]: Conversion map
+                - paragraph [ref=e40]: 첫 화면 메시지부터 CTA까지
+              - generic [ref=e41]:
+                - paragraph [ref=e42]: 핵심 포인트
+                - paragraph [ref=e43]: "04"
+            - generic [ref=e44]:
+              - generic [ref=e45]:
+                - generic [ref=e48]: 구매 이유 한 줄 정리
+                - generic [ref=e49]: 상단 후킹
+              - generic [ref=e50]:
+                - generic [ref=e53]: 의심 해결 섹션 배치
+                - generic [ref=e54]: 신뢰 보강
+              - generic [ref=e55]:
+                - generic [ref=e58]: 비교 / 후기 / 인증 정리
+                - generic [ref=e59]: 전환 근거
+              - generic [ref=e60]:
+                - generic [ref=e63]: 모바일 스크롤 리듬 설계
+                - generic [ref=e64]: 가독성 개선
+        - generic [ref=e65]:
+          - paragraph [ref=e66]: 기획
+          - paragraph [ref=e67]: 고객 질문 순서대로 정보 배치
+        - generic [ref=e70]:
+          - paragraph [ref=e71]: 카피 + 전환 흐름
+          - paragraph [ref=e72]: 고객이 망설이는 이유를 먼저 풀어주는 문장 설계
+    - generic [ref=e74]:
+      - generic [ref=e75]:
+        - paragraph [ref=e76]: TRUST
+        - heading "제품의 매력이 고객에게 제대로 전달되도록" [level=2] [ref=e77]
+        - paragraph [ref=e78]: 펀딩 제품부터 스마트스토어, 브랜드 자사몰까지. 제품 설명이 아니라 구매 결심이 움직이는 순서를 설계합니다.
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - paragraph [ref=e81]: "01"
+          - paragraph [ref=e82]: 펀딩 상세페이지
+        - generic [ref=e83]:
+          - paragraph [ref=e84]: "02"
+          - paragraph [ref=e85]: 스마트스토어 상세페이지
+        - generic [ref=e86]:
+          - paragraph [ref=e87]: "03"
+          - paragraph [ref=e88]: 브랜드 제품 상세페이지
+        - generic [ref=e89]:
+          - paragraph [ref=e90]: "04"
+          - paragraph [ref=e91]: 상세페이지 리뉴얼
+        - generic [ref=e92]:
+          - paragraph [ref=e93]: "05"
+          - paragraph [ref=e94]: 구매 전환 구조 설계
+    - generic [ref=e96]:
+      - generic [ref=e97]:
+        - paragraph [ref=e98]: PROBLEM
+        - heading "제품은 좋은데, 상세페이지에서 설득이 안 되고 있나요?" [level=2] [ref=e99]
+      - generic [ref=e100]:
+        - article [ref=e101]:
+          - paragraph [ref=e102]: "01"
+          - heading "장점은 많은데 무엇을 먼저 보여줘야 할지 모른다" [level=3] [ref=e103]
+          - paragraph [ref=e104]: 기능, 후기, 인증, 가격 메리트가 섞여 있을수록 첫 화면의 메시지가 흐려지고 고객은 빠르게 이탈합니다.
+        - article [ref=e105]:
+          - paragraph [ref=e106]: "02"
+          - heading "디자인은 예쁜데 구매 이유가 약하다" [level=3] [ref=e107]
+          - paragraph [ref=e108]: 시각적으로 깔끔해도 구매 전환은 별개의 문제입니다. 구조와 카피가 설득을 만들지 못하면 예쁨만 남습니다.
+        - article [ref=e109]:
+          - paragraph [ref=e110]: "03"
+          - heading "고객의 의심과 망설임을 해결하지 못한다" [level=3] [ref=e111]
+          - paragraph [ref=e112]: 왜 지금 사야 하는지, 어떤 불안을 먼저 해소해야 하는지 정리되지 않으면 장바구니 직전에서 멈추게 됩니다.
+    - generic [ref=e114]:
+      - generic [ref=e115]:
+        - paragraph [ref=e116]: SOLUTION
+        - heading "디자인 전에, 팔리는 흐름부터 설계합니다." [level=2] [ref=e117]
+        - paragraph [ref=e118]: 좋은 제품도 구조 없이 나열되면 설득력이 약해집니다. 고객이 이해하고 납득하는 순서를 먼저 만들고, 그 위에 카피와 디자인을 올립니다.
+      - generic [ref=e119]:
+        - article [ref=e120]:
+          - generic [ref=e122]: "01"
+          - heading "제품 분석" [level=3] [ref=e124]
+          - paragraph [ref=e125]: 자료를 그대로 옮기지 않고 제품이 실제로 선택되는 이유를 먼저 해석합니다.
+        - article [ref=e126]:
+          - generic [ref=e128]: "02"
+          - heading "고객 페인포인트 정리" [level=3] [ref=e130]
+          - paragraph [ref=e131]: 구매 전 검색 단계에서 고객이 어떤 질문과 불안을 가지는지 정리합니다.
+        - article [ref=e132]:
+          - generic [ref=e134]: "03"
+          - heading "셀링포인트 도출" [level=3] [ref=e136]
+          - paragraph [ref=e137]: 브랜드가 말하고 싶은 것보다 고객이 듣고 싶은 강점을 우선순위로 세웁니다.
+        - article [ref=e138]:
+          - generic [ref=e140]: "04"
+          - heading "상세페이지 구조 기획" [level=3] [ref=e142]
+          - paragraph [ref=e143]: 첫 화면, 문제 제기, 해결 근거, 제품 정보, FAQ까지 흐름이 끊기지 않도록 구성합니다.
+        - article [ref=e144]:
+          - generic [ref=e146]: "05"
+          - heading "카피라이팅 & 디자인" [level=3] [ref=e148]
+          - paragraph [ref=e149]: 문장을 정리하고 화면을 설계해 구매 맥락이 자연스럽게 읽히는 상세페이지로 완성합니다.
+    - generic [ref=e151]:
+      - generic [ref=e152]:
+        - paragraph [ref=e153]: PORTFOLIO
+        - heading "작업은 예쁘게 끝나는 것이 아니라, 이해되게 완성되어야 합니다." [level=2] [ref=e154]
+      - generic [ref=e155]:
+        - article [ref=e156]:
+          - generic [ref=e159]:
+            - generic [ref=e160]: 사용 맥락 정리
+            - generic [ref=e161]: "01"
+          - generic [ref=e176]:
+            - paragraph [ref=e177]: 생활용품 브랜드
+            - heading "기획 / 카피 / 디자인" [level=3] [ref=e178]
+            - paragraph [ref=e179]: 제품 기능 중심 설명을 구매 상황 중심 흐름으로 재구성
+        - article [ref=e180]:
+          - generic [ref=e183]:
+            - generic [ref=e184]: 비교 설계
+            - generic [ref=e185]: "02"
+          - generic [ref=e200]:
+            - paragraph [ref=e201]: 뷰티 스타트업
+            - heading "구조 기획 / 디자인" [level=3] [ref=e202]
+            - paragraph [ref=e203]: 성분 소개를 사용 전후 체감 포인트 중심 섹션으로 재배치
+        - article [ref=e204]:
+          - generic [ref=e207]:
+            - generic [ref=e208]: 정보 압축
+            - generic [ref=e209]: "03"
+          - generic [ref=e224]:
+            - paragraph [ref=e225]: 푸드 브랜드
+            - heading "카피 정리 / 리뉴얼" [level=3] [ref=e226]
+            - paragraph [ref=e227]: 길게 늘어진 정보 블록을 신뢰와 구매 포인트 중심으로 압축
+        - article [ref=e228]:
+          - generic [ref=e231]:
+            - generic [ref=e232]: 전환 보강
+            - generic [ref=e233]: "04"
+          - generic [ref=e248]:
+            - paragraph [ref=e249]: 펀딩 준비 제품
+            - heading "경쟁사 분석 / 썸네일 / 상세" [level=3] [ref=e250]
+            - paragraph [ref=e251]: 후원 결심 직전 이탈 포인트를 신뢰 섹션과 CTA 구조로 보강
+    - generic [ref=e254]:
+      - generic [ref=e255]:
+        - paragraph [ref=e256]: PROCESS
+        - heading "이런 순서로 진행합니다." [level=2] [ref=e257]
+        - paragraph [ref=e258]: 자료 확인부터 최종 납품까지, 결과물의 모양보다 먼저 판단과 설계의 근거를 분명하게 만드는 흐름으로 진행합니다.
+      - generic [ref=e259]:
+        - article [ref=e260]:
+          - generic [ref=e261]: STEP 01
+          - heading "제품 자료 확인" [level=3] [ref=e262]
+          - paragraph [ref=e263]: 현재 판매 자료와 제품 정보를 먼저 확인해 핵심 판단 재료를 모읍니다.
+        - article [ref=e264]:
+          - generic [ref=e265]: STEP 02
+          - heading "시장 / 경쟁사 분석" [level=3] [ref=e266]
+          - paragraph [ref=e267]: 같은 카테고리 안에서 어떤 메시지가 반복되고 어디서 차별화할지 파악합니다.
+        - article [ref=e268]:
+          - generic [ref=e269]: STEP 03
+          - heading "상세페이지 구조 기획" [level=3] [ref=e270]
+          - paragraph [ref=e271]: 구매 흐름 기준으로 섹션 순서와 정보 강약을 설계합니다.
+        - article [ref=e272]:
+          - generic [ref=e273]: STEP 04
+          - heading "카피라이팅" [level=3] [ref=e274]
+          - paragraph [ref=e275]: 제품의 장점이 아니라 고객이 이해하는 언어로 문장을 다시 세웁니다.
+        - article [ref=e276]:
+          - generic [ref=e277]: STEP 05
+          - heading "디자인 제작" [level=3] [ref=e278]
+          - paragraph [ref=e279]: 설계된 흐름이 읽히도록 화면 리듬과 시선 이동을 디자인합니다.
+        - article [ref=e280]:
+          - generic [ref=e281]: STEP 06
+          - heading "수정 및 최종 납품" [level=3] [ref=e282]
+          - paragraph [ref=e283]: 피드백을 반영해 마감 품질을 정리하고 실제 운영에 맞게 전달합니다.
+    - generic [ref=e285]:
+      - generic [ref=e286]:
+        - paragraph [ref=e287]: PACKAGE
+        - heading "필요한 범위에 맞춰 선택하세요." [level=2] [ref=e288]
+      - generic [ref=e289]:
+        - article [ref=e290]:
+          - generic [ref=e292]:
+            - paragraph [ref=e293]: 기획안이 이미 정리된 경우
+            - heading "Basic" [level=3] [ref=e294]
+          - paragraph [ref=e295]: 기존 기획을 바탕으로 화면 완성도를 높이고 빠르게 제작이 필요한 경우에 적합합니다.
+          - list [ref=e296]:
+            - listitem [ref=e297]:
+              - generic [ref=e299]: 기존 기획안 기반 디자인 제작
+            - listitem [ref=e300]:
+              - generic [ref=e302]: 이미지 구성
+            - listitem [ref=e303]:
+              - generic [ref=e305]: 모바일 최적화
+          - link "문의하기" [ref=e306] [cursor=pointer]:
+            - /url: mailto:hello@spdt.studio?subject=무료%20진단%20문의
+        - article [ref=e307]:
+          - generic [ref=e308]:
+            - generic [ref=e309]:
+              - paragraph [ref=e310]: 구조와 표현을 함께 정리하고 싶은 경우
+              - heading "Standard" [level=3] [ref=e311]
+            - generic [ref=e312]: MOST FIT
+          - paragraph [ref=e313]: 가장 많이 선택되는 범위입니다. 제품 분석부터 구조 기획, 카피 정리, 디자인까지 연결합니다.
+          - list [ref=e314]:
+            - listitem [ref=e315]:
+              - generic [ref=e317]: 제품 분석
+            - listitem [ref=e318]:
+              - generic [ref=e320]: 상세페이지 구조 기획
+            - listitem [ref=e321]:
+              - generic [ref=e323]: 카피 정리
+            - listitem [ref=e324]:
+              - generic [ref=e326]: 디자인 제작
+          - link "문의하기" [ref=e327] [cursor=pointer]:
+            - /url: mailto:hello@spdt.studio?subject=무료%20진단%20문의
+        - article [ref=e328]:
+          - generic [ref=e330]:
+            - paragraph [ref=e331]: 시장 분석까지 포함해 전환력을 높이고 싶은 경우
+            - heading "Premium" [level=3] [ref=e332]
+          - paragraph [ref=e333]: 브랜드 관점이 아니라 시장과 고객 관점에서 판매 논리를 새로 세우는 패키지입니다.
+          - list [ref=e334]:
+            - listitem [ref=e335]:
+              - generic [ref=e337]: 경쟁사 분석
+            - listitem [ref=e338]:
+              - generic [ref=e340]: 셀링포인트 도출
+            - listitem [ref=e341]:
+              - generic [ref=e343]: 상세페이지 기획
+            - listitem [ref=e344]:
+              - generic [ref=e346]: 카피라이팅
+            - listitem [ref=e347]:
+              - generic [ref=e349]: 디자인
+            - listitem [ref=e350]:
+              - generic [ref=e352]: 썸네일 / 배너 구성
+          - link "문의하기" [ref=e353] [cursor=pointer]:
+            - /url: mailto:hello@spdt.studio?subject=무료%20진단%20문의
+    - generic [ref=e355]:
+      - generic [ref=e356]:
+        - paragraph [ref=e357]: TESTIMONIAL
+        - heading "고객은 디자인보다 “정리되는 경험”을 기억합니다." [level=2] [ref=e358]
+      - generic [ref=e359]:
+        - article [ref=e360]:
+          - paragraph [ref=e361]: “막연하게 예쁘게 만들어 달라고 생각했는데, 왜 이 순서로 보여줘야 하는지부터 정리해 주셔서 내부에서도 설득이 쉬워졌어요.”
+          - generic [ref=e362]:
+            - paragraph [ref=e363]: 김소연
+            - paragraph [ref=e364]: 라이프스타일 브랜드 운영
+        - article [ref=e365]:
+          - paragraph [ref=e366]: “제품 장점이 많아서 오히려 복잡했는데, 고객 입장에서 먼저 읽히는 흐름으로 정리되니 메시지가 훨씬 또렷해졌습니다.”
+          - generic [ref=e367]:
+            - paragraph [ref=e368]: 박준형
+            - paragraph [ref=e369]: 펀딩 프로젝트 준비
+        - article [ref=e370]:
+          - paragraph [ref=e371]: “디자인 결과물보다도 어떤 의심을 먼저 해결해야 하는지 구조로 설명해 준 점이 가장 만족스러웠어요.”
+          - generic [ref=e372]:
+            - paragraph [ref=e373]: 이서윤
+            - paragraph [ref=e374]: 스마트스토어 셀러
+    - generic [ref=e376]:
+      - generic [ref=e377]:
+        - paragraph [ref=e378]: FAQ
+        - heading "자주 묻는 질문" [level=2] [ref=e379]
+        - paragraph [ref=e380]: 아래 내용을 먼저 확인해 보시고, 프로젝트 상황이 다르면 메일로 바로 문의해 주세요.
+        - link "hello@spdt.studio" [ref=e381] [cursor=pointer]:
+          - /url: mailto:hello@spdt.studio
+      - generic [ref=e382]:
+        - group [ref=e383]:
+          - generic "제작 기간은 얼마나 걸리나요? +" [ref=e384] [cursor=pointer]:
+            - generic [ref=e385]: 제작 기간은 얼마나 걸리나요?
+            - generic [ref=e386]: +
+          - paragraph [ref=e387]: 자료 준비 상태와 범위에 따라 달라지지만, 보통 1주에서 3주 사이로 진행됩니다. 분석과 기획이 포함되는 경우 일정이 조금 더 길어질 수 있습니다.
+        - group [ref=e388]:
+          - generic "준비해야 할 자료는 무엇인가요? +" [ref=e389] [cursor=pointer]:
+            - generic [ref=e390]: 준비해야 할 자료는 무엇인가요?
+            - generic [ref=e391]: +
+        - group [ref=e392]:
+          - generic "기획만 따로 의뢰할 수 있나요? +" [ref=e393] [cursor=pointer]:
+            - generic [ref=e394]: 기획만 따로 의뢰할 수 있나요?
+            - generic [ref=e395]: +
+        - group [ref=e396]:
+          - generic "비용은 어떻게 책정되나요? +" [ref=e397] [cursor=pointer]:
+            - generic [ref=e398]: 비용은 어떻게 책정되나요?
+            - generic [ref=e399]: +
+        - group [ref=e400]:
+          - generic "수정은 몇 번 가능한가요? +" [ref=e401] [cursor=pointer]:
+            - generic [ref=e402]: 수정은 몇 번 가능한가요?
+            - generic [ref=e403]: +
+    - generic [ref=e409]:
+      - generic [ref=e410]:
+        - paragraph [ref=e411]: FREE DIAGNOSIS
+        - heading "지금 상세페이지에서 구매를 막고 있는 요소 3가지를 짚어드립니다." [level=2] [ref=e412]
+        - paragraph [ref=e413]: 제품 URL 또는 자료를 보내주시면, 개선 방향을 간단히 정리해드립니다.
+      - generic [ref=e414]:
+        - link "무료 진단 문의하기" [ref=e415] [cursor=pointer]:
+          - /url: mailto:hello@spdt.studio?subject=무료%20진단%20문의
+        - generic [ref=e416]: hello@spdt.studio
+    - generic [ref=e418]:
+      - generic [ref=e419]:
+        - generic [ref=e420]:
+          - generic [ref=e421]: SP
+          - generic [ref=e422]:
+            - paragraph [ref=e423]: SPDT
+            - paragraph [ref=e424]: Selling Page Detail
+        - paragraph [ref=e425]: 브랜드와 셀러가 플랫폼 의존 없이 직접 신뢰를 만들 수 있도록, 구매 흐름 중심의 상세페이지를 기획하고 디자인합니다.
+        - link "hello@spdt.studio" [ref=e426] [cursor=pointer]:
+          - /url: mailto:hello@spdt.studio
+      - generic [ref=e427]:
+        - generic [ref=e428]:
+          - paragraph [ref=e429]: MENU
+          - generic [ref=e430]:
+            - link "서비스" [ref=e431] [cursor=pointer]:
+              - /url: "#trust"
+            - link "포트폴리오" [ref=e432] [cursor=pointer]:
+              - /url: "#portfolio"
+            - link "패키지" [ref=e433] [cursor=pointer]:
+              - /url: "#packages"
+            - link "문의" [ref=e434] [cursor=pointer]:
+              - /url: "#contact"
+        - paragraph [ref=e435]: © 2026 SPDT. All rights reserved.
+  - alert [ref=e436]

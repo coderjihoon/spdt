@@ -1,0 +1,10 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - generic [ref=e3]: SPDT
+    - generic [ref=e4]: Selling Page Detail
+  - generic [ref=e5]:
+    - heading "구매를 만드는 상세페이지 제작 서비스" [level=1] [ref=e6]: 구매를 만드는상세페이지 제작 서비스
+    - generic [ref=e7]: 제품의 매력과 구매 이유가 한눈에 보이도록 구매 흐름 중심으로 기획하고 디자인합니다.
+  - generic [ref=e8]:
+    - generic [ref=e9]: 제품 URL만 보내도 무료 진단
+    - generic [ref=e10]: spdt.studio

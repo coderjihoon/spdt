@@ -1,0 +1,295 @@
+- main [ref=e2]:
+  - link "FREE 제품 URL 또는 상세페이지 이미지만 보내도 무료로 진단해드립니다." [ref=e4] [cursor=pointer]:
+    - /url: "#diagnosis-form"
+    - generic [ref=e5]: FREE
+    - generic [ref=e6]: 제품 URL 또는 상세페이지 이미지만 보내도 무료로 진단해드립니다.
+  - generic [ref=e8]:
+    - link "상 상페닥터 상세페이지 진단·개선 서비스" [ref=e9] [cursor=pointer]:
+      - /url: "#"
+      - generic [ref=e10]: 상
+      - generic [ref=e11]:
+        - paragraph [ref=e12]: 상페닥터
+        - paragraph [ref=e13]: 상세페이지 진단·개선 서비스
+    - navigation [ref=e14]:
+      - link "진단 대상" [ref=e15] [cursor=pointer]:
+        - /url: "#problems"
+      - link "진단 항목" [ref=e16] [cursor=pointer]:
+        - /url: "#diagnosis"
+      - link "전달 예시" [ref=e17] [cursor=pointer]:
+        - /url: "#examples"
+      - link "신청" [ref=e18] [cursor=pointer]:
+        - /url: "#diagnosis-form"
+      - link "FAQ" [ref=e19] [cursor=pointer]:
+        - /url: "#faq"
+    - link "무료 진단 신청" [ref=e20] [cursor=pointer]:
+      - /url: "#diagnosis-form"
+  - generic [ref=e24]:
+    - generic [ref=e25]:
+      - paragraph [ref=e26]: DETAIL PAGE CLINIC
+      - heading "상세페이지, 어디서 막히는지 무료로 진단해드립니다." [level=1] [ref=e27]:
+        - text: 상세페이지,
+        - text: 어디서 막히는지
+        - text: 무료로 진단해드립니다.
+      - paragraph [ref=e28]: 제품 URL 또는 상세페이지 이미지를 보내주세요. 상페닥터가 구조, 카피, 디자인 흐름을 확인하고 구매를 막는 요소 3가지를 짚어드립니다.
+      - generic [ref=e29]:
+        - link "무료 진단 신청하기" [ref=e30] [cursor=pointer]:
+          - /url: "#diagnosis-form"
+        - link "진단 예시 보기" [ref=e31] [cursor=pointer]:
+          - /url: "#examples"
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - term [ref=e34]: 무료
+          - definition [ref=e35]: 상세페이지 1차 진단
+        - generic [ref=e36]:
+          - term [ref=e37]: 3가지
+          - definition [ref=e38]: 구매를 막는 요소 정리
+        - generic [ref=e39]:
+          - term [ref=e40]: URL/이미지
+          - definition [ref=e41]: 둘 중 하나만 있어도 신청 가능
+    - generic [ref=e42]:
+      - generic [ref=e44]:
+        - generic [ref=e45]:
+          - generic [ref=e46]:
+            - paragraph [ref=e47]: FREE REPORT
+            - heading "구매를 막는 요소 3가지 진단" [level=2] [ref=e48]:
+              - text: 구매를 막는 요소
+              - text: 3가지 진단
+          - generic [ref=e49]: 24h check
+        - generic [ref=e50]:
+          - generic [ref=e52]:
+            - paragraph [ref=e55]: 첫 화면
+            - paragraph [ref=e56]: 핵심 메시지 약함
+          - generic [ref=e58]:
+            - paragraph [ref=e61]: 흐름
+            - paragraph [ref=e62]: 구매 근거 순서 조정
+          - generic [ref=e64]:
+            - paragraph [ref=e67]: 카피
+            - paragraph [ref=e68]: 고객 언어로 재정리
+        - generic [ref=e69]:
+          - paragraph [ref=e70]: NEXT ACTION
+          - paragraph [ref=e71]:
+            - text: 단순히 예쁘게 고치는 것이 아니라,
+            - text: 고객이 구매까지 읽게 되는 순서를 제안합니다.
+      - generic [ref=e72]:
+        - paragraph [ref=e73]: 접수 자료
+        - paragraph [ref=e74]: URL 또는 이미지 1개
+  - generic [ref=e76]:
+    - generic [ref=e77]:
+      - paragraph [ref=e78]: PROBLEM
+      - heading "이런 상황이라면 먼저 진단이 필요합니다" [level=2] [ref=e79]
+      - paragraph [ref=e80]: 상세페이지는 예쁜 이미지보다 먼저, 고객이 왜 멈추는지 찾는 일이 필요합니다.
+    - generic [ref=e81]:
+      - article [ref=e82]:
+        - generic [ref=e83]: "01"
+        - paragraph [ref=e84]: 상세페이지가 있는데 전환이 잘 안 됩니다.
+      - article [ref=e85]:
+        - generic [ref=e86]: "02"
+        - paragraph [ref=e87]: 광고비는 쓰고 있는데 구매가 잘 안 일어납니다.
+      - article [ref=e88]:
+        - generic [ref=e89]: "03"
+        - paragraph [ref=e90]: 무엇을 먼저 고쳐야 할지 모르겠어요.
+      - article [ref=e91]:
+        - generic [ref=e92]: "04"
+        - paragraph [ref=e93]: 제품 장점은 많은데 고객에게 잘 전달되지 않아요.
+      - article [ref=e94]:
+        - generic [ref=e95]: "05"
+        - paragraph [ref=e96]: 와디즈·텀블벅 펀딩을 준비 중이에요.
+      - article [ref=e97]:
+        - generic [ref=e98]: "06"
+        - paragraph [ref=e99]: 기존 상세페이지가 촌스럽거나 정리가 안 되어 있어요.
+  - generic [ref=e101]:
+    - generic [ref=e102]:
+      - paragraph [ref=e103]: DIAGNOSIS
+      - heading "상페닥터는 이 5가지를 봅니다" [level=2] [ref=e104]
+      - paragraph [ref=e105]: 감으로 평가하지 않습니다. 고객이 상세페이지를 읽고 결제까지 가는 흐름을 기준으로 병목을 찾습니다.
+    - generic [ref=e107]:
+      - article [ref=e108]:
+        - generic [ref=e109]:
+          - generic [ref=e110]: "1"
+          - paragraph [ref=e111]: CHECK
+        - generic [ref=e112]:
+          - heading "첫 화면 메시지" [level=3] [ref=e113]
+          - paragraph [ref=e114]: 고객이 3초 안에 제품의 핵심 가치와 구매 이유를 이해하는지 확인합니다.
+      - article [ref=e115]:
+        - generic [ref=e116]:
+          - generic [ref=e117]: "2"
+          - paragraph [ref=e118]: CHECK
+        - generic [ref=e119]:
+          - heading "구매 흐름" [level=3] [ref=e120]
+          - paragraph [ref=e121]: 문제 제기, 해결 근거, 제품 정보, CTA가 자연스럽게 이어지는지 봅니다.
+      - article [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]: "3"
+          - paragraph [ref=e125]: CHECK
+        - generic [ref=e126]:
+          - heading "셀링포인트" [level=3] [ref=e127]
+          - paragraph [ref=e128]: 브랜드가 말하고 싶은 장점이 고객이 사고 싶은 이유로 번역되어 있는지 점검합니다.
+      - article [ref=e129]:
+        - generic [ref=e130]:
+          - generic [ref=e131]: "4"
+          - paragraph [ref=e132]: CHECK
+        - generic [ref=e133]:
+          - heading "카피" [level=3] [ref=e134]
+          - paragraph [ref=e135]: 문장이 길거나 추상적이지 않은지, 망설임을 줄이는 언어인지 확인합니다.
+      - article [ref=e136]:
+        - generic [ref=e137]:
+          - generic [ref=e138]: "5"
+          - paragraph [ref=e139]: CHECK
+        - generic [ref=e140]:
+          - heading "디자인 가독성" [level=3] [ref=e141]
+          - paragraph [ref=e142]: 모바일 스크롤에서 정보 강약, 여백, 이미지와 텍스트의 리듬이 읽히는지 봅니다.
+  - generic [ref=e144]:
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - paragraph [ref=e147]: EXAMPLE
+        - heading "진단은 이렇게 전달됩니다" [level=2] [ref=e148]
+      - paragraph [ref=e149]: 추상적인 평가 대신, 문제와 이유 그리고 바로 생각해볼 수 있는 개선 방향으로 정리합니다.
+    - generic [ref=e150]:
+      - article [ref=e151]:
+        - paragraph [ref=e152]: 첫 화면 진단
+        - generic [ref=e153]:
+          - generic [ref=e154]:
+            - paragraph [ref=e155]: 문제점
+            - paragraph [ref=e156]: 첫 화면이 제품명과 큰 이미지 중심이라 구매 이유가 바로 보이지 않습니다.
+          - generic [ref=e157]:
+            - paragraph [ref=e158]: 왜 문제인지
+            - paragraph [ref=e159]: 광고나 검색으로 들어온 고객은 제품을 자세히 읽기 전에 나에게 필요한 이유부터 찾습니다.
+          - generic [ref=e160]:
+            - paragraph [ref=e161]: 개선 방향
+            - paragraph [ref=e162]: 상단 문장을 고객 상황 중심으로 바꾸고, 핵심 효과와 신뢰 근거를 첫 화면 안에 배치합니다.
+      - article [ref=e163]:
+        - paragraph [ref=e164]: 구매 흐름 진단
+        - generic [ref=e165]:
+          - generic [ref=e166]:
+            - paragraph [ref=e167]: 문제점
+            - paragraph [ref=e168]: 기능, 인증, 후기, 가격 정보가 같은 비중으로 나열되어 있습니다.
+          - generic [ref=e169]:
+            - paragraph [ref=e170]: 왜 문제인지
+            - paragraph [ref=e171]: 정보가 많아도 우선순위가 없으면 고객은 어떤 근거로 판단해야 할지 놓치게 됩니다.
+          - generic [ref=e172]:
+            - paragraph [ref=e173]: 개선 방향
+            - paragraph [ref=e174]: 고민 제기, 해결 원리, 차별점, 사용 증거, CTA 순서로 섹션을 재배치합니다.
+  - generic [ref=e176]:
+    - generic [ref=e177]:
+      - paragraph [ref=e178]: PROCESS
+      - heading "신청은 간단합니다" [level=2] [ref=e179]
+      - paragraph [ref=e180]: 자료가 완벽하지 않아도 됩니다. 현재 상태를 기준으로 먼저 막히는 지점을 찾아드립니다.
+    - generic [ref=e181]:
+      - article [ref=e182]:
+        - generic [ref=e183]: "1"
+        - heading "제품 URL 또는 상세페이지 이미지를 보냅니다." [level=3] [ref=e184]
+        - paragraph [ref=e185]: 현재 판매 중인 링크, 준비 중인 상세페이지 캡처, 이미지 초안 중 편한 자료를 보내주세요.
+      - article [ref=e186]:
+        - generic [ref=e187]: "2"
+        - heading "상페닥터가 구조·카피·디자인 흐름을 확인합니다." [level=3] [ref=e188]
+        - paragraph [ref=e189]: 첫 화면, 설득 순서, 카피 명확도, 모바일 가독성을 구매 흐름 기준으로 살펴봅니다.
+      - article [ref=e190]:
+        - generic [ref=e191]: "3"
+        - heading "구매를 막고 있는 요소 3가지를 정리해드립니다." [level=3] [ref=e192]
+        - paragraph [ref=e193]: 바로 확인할 수 있는 병목과 왜 문제가 되는지를 짧고 명확하게 전달합니다.
+      - article [ref=e194]:
+        - generic [ref=e195]: "4"
+        - heading "필요한 경우 제작/리뉴얼 방향을 제안드립니다." [level=3] [ref=e196]
+        - paragraph [ref=e197]: 단순 수정으로 충분한지, 구조 리뉴얼이 필요한지 다음 액션을 구분해 안내합니다.
+  - generic [ref=e199]:
+    - generic [ref=e200]:
+      - generic [ref=e201]:
+        - paragraph [ref=e202]: TRUST
+        - heading "상페닥터는 예쁜 디자인보다 먼저, 팔리는 구조를 봅니다" [level=2] [ref=e203]:
+          - text: 상페닥터는 예쁜 디자인보다 먼저,
+          - text: 팔리는 구조를 봅니다
+      - paragraph [ref=e204]: 상세페이지를 고친다는 건 이미지를 더 화려하게 만드는 일이 아닙니다. 고객이 납득하고, 비교하고, 확신하는 순서를 만드는 일입니다.
+    - generic [ref=e205]:
+      - article [ref=e206]:
+        - heading "예쁜 화면보다 먼저 흐름을 봅니다." [level=3] [ref=e207]
+        - paragraph [ref=e208]: 디자인을 더하기 전에 고객이 어떤 순서로 이해하고 확신해야 하는지부터 정리합니다.
+      - article [ref=e209]:
+        - heading "고객의 망설임을 기준으로 봅니다." [level=3] [ref=e210]
+        - paragraph [ref=e211]: 제품 장점 나열이 아니라 구매 전 고객이 떠올리는 의심과 질문을 기준으로 진단합니다.
+      - article [ref=e212]:
+        - heading "제작 상담으로 이어질 수 있게 봅니다." [level=3] [ref=e213]
+        - paragraph [ref=e214]: 무료 진단에서 끝나지 않고, 필요하면 제작·리뉴얼 범위와 우선순위를 현실적으로 제안합니다.
+  - generic [ref=e216]:
+    - generic [ref=e217]:
+      - paragraph [ref=e218]: FREE DIAGNOSIS
+      - heading "무료 진단 신청하기" [level=2] [ref=e219]
+      - paragraph [ref=e220]: 지금 상세페이지에서 구매를 막고 있는 요소 3가지를 짚어드립니다. 제품 URL 또는 이미지 중 준비된 자료만 보내주세요.
+      - generic [ref=e221]:
+        - paragraph [ref=e222]: 신청 전 준비하면 좋은 것
+        - list [ref=e223]:
+          - listitem [ref=e224]: 제품 URL
+          - listitem [ref=e226]: 상세페이지 이미지 또는 캡처
+          - listitem [ref=e228]: 현재 고민 한 줄
+    - generic [ref=e230]:
+      - generic [ref=e231]:
+        - generic [ref=e232]:
+          - text: 이름/브랜드
+          - textbox "이름/브랜드" [ref=e233]:
+            - /placeholder: "예: 오월브랜드"
+        - generic [ref=e234]:
+          - text: 연락처/이메일
+          - textbox "연락처/이메일" [ref=e235]:
+            - /placeholder: 답변 받을 연락처
+      - generic [ref=e236]:
+        - text: 제품 URL
+        - textbox "제품 URL" [ref=e237]:
+          - /placeholder: https://
+      - generic [ref=e238]:
+        - text: 상세페이지 이미지
+        - button "상세페이지 이미지 이미지 파일은 메일 작성 창에서 첨부로 함께 보내주세요." [ref=e239]
+        - paragraph [ref=e240]: 이미지 파일은 메일 작성 창에서 첨부로 함께 보내주세요.
+      - generic [ref=e241]:
+        - text: 현재 고민
+        - textbox "현재 고민" [ref=e242]:
+          - /placeholder: "예: 광고 클릭은 있는데 구매 전환이 낮아요."
+      - button "무료 진단 신청 메일 보내기" [ref=e243]
+  - generic [ref=e245]:
+    - generic [ref=e246]:
+      - paragraph [ref=e247]: FAQ
+      - heading "자주 묻는 질문" [level=2] [ref=e248]
+      - paragraph [ref=e249]: 무료 진단만 받아도 괜찮습니다. 상황에 따라 제작이나 리뉴얼이 필요할 때만 다음 방향을 제안드립니다.
+      - link "hello@spdt.studio" [ref=e250] [cursor=pointer]:
+        - /url: mailto:hello@spdt.studio?subject=%EC%83%81%ED%8E%98%EB%8B%A5%ED%84%B0%20%EB%AC%B4%EB%A3%8C%20%EC%A7%84%EB%8B%A8%20%EC%8B%A0%EC%B2%AD
+    - generic [ref=e251]:
+      - group [ref=e252]:
+        - generic "무료 진단은 정말 무료인가요? +" [ref=e253] [cursor=pointer]:
+          - generic [ref=e254]: 무료 진단은 정말 무료인가요?
+          - generic [ref=e255]: +
+        - paragraph [ref=e256]: 네. 제품 URL이나 상세페이지 이미지를 보내주시면 구매를 막는 핵심 요소 3가지를 무료로 정리해드립니다.
+      - group [ref=e257]:
+        - generic "무엇을 보내야 하나요? +" [ref=e258] [cursor=pointer]:
+          - generic [ref=e259]: 무엇을 보내야 하나요?
+          - generic [ref=e260]: +
+      - group [ref=e261]:
+        - generic "진단 후 꼭 제작을 맡겨야 하나요? +" [ref=e262] [cursor=pointer]:
+          - generic [ref=e263]: 진단 후 꼭 제작을 맡겨야 하나요?
+          - generic [ref=e264]: +
+      - group [ref=e265]:
+        - generic "어떤 부분을 봐주시나요? +" [ref=e266] [cursor=pointer]:
+          - generic [ref=e267]: 어떤 부분을 봐주시나요?
+          - generic [ref=e268]: +
+      - group [ref=e269]:
+        - generic "신규 상품도 진단 가능한가요? +" [ref=e270] [cursor=pointer]:
+          - generic [ref=e271]: 신규 상품도 진단 가능한가요?
+          - generic [ref=e272]: +
+  - generic [ref=e274]:
+    - generic [ref=e275]:
+      - generic [ref=e276]:
+        - generic [ref=e277]: 상
+        - generic [ref=e278]:
+          - paragraph [ref=e279]: 상페닥터
+          - paragraph [ref=e280]: 상세페이지 진단·개선 서비스
+      - paragraph [ref=e281]: 상세페이지의 구조, 카피, 디자인 흐름을 진단하고 구매를 막는 요소를 정리해 개선 방향을 제안합니다.
+      - link "hello@spdt.studio" [ref=e282] [cursor=pointer]:
+        - /url: mailto:hello@spdt.studio?subject=%EC%83%81%ED%8E%98%EB%8B%A5%ED%84%B0%20%EB%AC%B4%EB%A3%8C%20%EC%A7%84%EB%8B%A8%20%EC%8B%A0%EC%B2%AD
+    - generic [ref=e283]:
+      - navigation [ref=e284]:
+        - link "진단 항목" [ref=e285] [cursor=pointer]:
+          - /url: "#diagnosis"
+        - link "전달 예시" [ref=e286] [cursor=pointer]:
+          - /url: "#examples"
+        - link "무료 신청" [ref=e287] [cursor=pointer]:
+          - /url: "#diagnosis-form"
+        - link "FAQ" [ref=e288] [cursor=pointer]:
+          - /url: "#faq"
+      - paragraph [ref=e289]: © 2026 상페닥터. All rights reserved.

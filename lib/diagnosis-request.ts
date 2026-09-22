@@ -57,3 +57,12 @@ export function extensionFor(type: string) {
 }
 
 export const koreanDay = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
+
+export function isSmartStoreUrl(value: string | null) {
+  if (!value) return false;
+  try { return new URL(value).hostname === "smartstore.naver.com"; } catch { return false; }
+}
+
+export function isNaverLoginPage(html: string) {
+  return /<title[^>]*>\s*NAVER 로그인\s*<\/title>/i.test(html);
+}

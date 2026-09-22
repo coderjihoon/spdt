@@ -24,7 +24,7 @@ export type Report = {
   nextAction: string;
 };
 
-type ImageBlock = { type: "image"; source: { type: "base64"; media_type: "image/png"; data: string } };
+type ImageBlock = { type: "image"; source: { type: "base64"; media_type: "image/jpeg"; data: string } };
 
 const SCHEMA = {
   type: "object",
@@ -60,14 +60,14 @@ async function toImageBlocks(buffer: Buffer): Promise<ImageBlock[]> {
   let { width = 0, height = 0, format } = await image.metadata();
   if (!width || !height || !["png", "jpeg", "webp"].includes(format ?? "")) throw new Error("지원하지 않는 이미지입니다.");
   if (width > MAX_W) {
-    image = sharp(await image.resize({ width: MAX_W }).png().toBuffer());
+    image = sharp(await image.resize({ width: MAX_W }).jpeg({ quality: 65 }).toBuffer());
     ({ width = 0, height = 0 } = await image.metadata());
   }
-  const base = await image.png().toBuffer();
+  const base = await image.jpeg({ quality: 65 }).toBuffer();
   const blocks: ImageBlock[] = [];
   for (let top = 0; top < height; top += TILE_H) {
-    const tile = await sharp(base).extract({ left: 0, top, width, height: Math.min(TILE_H, height - top) }).png().toBuffer();
-    blocks.push({ type: "image", source: { type: "base64", media_type: "image/png", data: tile.toString("base64") } });
+    const tile = await sharp(base).extract({ left: 0, top, width, height: Math.min(TILE_H, height - top) }).jpeg({ quality: 65 }).toBuffer();
+    blocks.push({ type: "image", source: { type: "base64", media_type: "image/jpeg", data: tile.toString("base64") } });
   }
   return blocks;
 }

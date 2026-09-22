@@ -53,7 +53,7 @@ details > summary::-webkit-details-marker {
 }
 
 ::selection {
-  background: rgba(70, 63, 166, 0.18);
+  background: rgba(0, 78, 224, 0.18);
   color: #0f172a;
 }
 

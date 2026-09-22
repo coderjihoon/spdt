@@ -1,15 +1,16 @@
 import { notFound } from "next/navigation";
 import type { Report } from "@/lib/diagnosis";
 import { supabaseAdmin } from "@/lib/supabase";
+import { ConsultButton } from "@/components/report/ConsultButton";
 
 type Item = { name: string; score: number; note: string };
 type Problem = { problem: string; why: string; direction: string };
 type Priority = { item: string; impact: string; difficulty: string };
-type DisplayReport = Report & { url?: string; generatedAt?: string };
+type DisplayReport = Report & { url?: string; generatedAt?: string; imageUrls: string[] };
 
 /* Wanted Montage(WDS) 토큰 + 상페닥터 브랜드 인디고 */
 const T = {
-  accent: "#463fa6",
+  accent: "#004EE0",
   pageBg: "#F7F7F8", // coolNeutral 99
   border: "#E1E2E4", // line.solid.normal (coolNeutral 96)
   text: "#171719", // label.normal (coolNeutral 10)
@@ -40,14 +41,25 @@ const LEVEL: Record<string, { c: string; bg: string }> = {
 
 async function loadReport(slug: string): Promise<DisplayReport | null> {
   try {
-    const { data, error } = await supabaseAdmin()
+    const supabase = supabaseAdmin();
+    const { data, error } = await supabase
       .from("diagnoses")
-      .select("product_url, completed_at, report")
+      .select("product_url, completed_at, input_paths, report")
       .eq("access_token", slug)
       .eq("status", "complete")
       .maybeSingle();
     if (error || !data?.report) return null;
-    return { ...(data.report as Report), url: data.product_url ?? undefined, generatedAt: data.completed_at?.slice(0, 10) };
+    const paths = Array.isArray(data.input_paths) ? data.input_paths : [];
+    const signed = await Promise.all(paths.map(async (path) => {
+      const { data: signedUrl } = await supabase.storage.from("diagnosis-inputs").createSignedUrl(path, 60 * 60 * 24 * 7);
+      return signedUrl?.signedUrl;
+    }));
+    return {
+      ...(data.report as Report),
+      url: data.product_url ?? undefined,
+      generatedAt: data.completed_at?.slice(0, 10),
+      imageUrls: signed.filter((u): u is string => Boolean(u)),
+    };
   } catch {
     return null;
   }
@@ -177,6 +189,12 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
           <section className="rounded-2xl p-7 text-white sm:p-8" style={{ backgroundColor: T.accent }}>
             <p className="text-[11px] font-semibold tracking-[0.14em] text-white/60">다음 행동</p>
             <p className="mt-2.5 text-[15px] leading-8">{r.nextAction}</p>
+            <ConsultButton
+              code={slug.slice(0, 6).toUpperCase()}
+              reportUrl={`${process.env.NEXT_PUBLIC_SITE_URL ?? "https://spdt.studio"}/report/${slug}`}
+              productUrl={r.url}
+              imageUrls={r.imageUrls}
+            />
           </section>
         </div>
 

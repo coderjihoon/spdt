@@ -8,43 +8,28 @@ const labels = [
 
 export function ExampleSection() {
   return (
-    <section id="examples" className="bg-[#eef0e5] px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-      <div className="mx-auto max-w-[1180px]">
-        <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
-          <div className="max-w-[760px]">
-            <p className="text-[13px] font-semibold tracking-[0.18em] text-[#637348]">EXAMPLE</p>
-            <h2 className="mt-3 text-[34px] font-semibold leading-[1.12] tracking-[-0.04em] text-[#1f2a24] sm:text-[46px]">
-              진단은 이렇게 전달됩니다
-            </h2>
+    <section id="examples" className="bg-[#f7f7fb] px-4 py-14 sm:px-6 lg:px-10 lg:py-24">
+      <div className="mx-auto max-w-[1280px]">
+        <div className="flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between">
+          <div className="max-w-[780px]">
+            <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">REPORT EXAMPLE</p>
+            <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[44px] lg:text-[52px]">문제와 이유,<br />다음 방향까지 정리합니다.</h2>
           </div>
-          <p className="max-w-[360px] text-[15px] leading-7 text-[#586257]">
-            추상적인 평가 대신, 문제와 이유 그리고 바로 생각해볼 수 있는 개선
-            방향으로 정리합니다.
-          </p>
+          <p className="max-w-[380px] text-[15px] leading-7 text-slate-600">문제와 이유를 짚고, 개선 방향까지 한 흐름으로 전달합니다.</p>
         </div>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-2">
-          {applyExampleCards.map((card) => (
-            <article
-              key={card.eyebrow}
-              className="rounded-[26px] border border-[#d7ddc3] bg-[#fffdf8] p-6 shadow-[0_18px_52px_rgba(57,74,53,0.08)] sm:p-8"
-            >
-              <p className="text-[13px] font-semibold tracking-[0.18em] text-[#748456]">
-                {card.eyebrow}
-              </p>
-
-              <div className="mt-7 space-y-4">
-                {labels.map((item) => (
-                  <div
-                    key={item.key}
-                    className="rounded-[18px] border border-[#e7dfcf] bg-[#faf8f3] p-5"
-                  >
-                    <p className="text-[12px] font-semibold tracking-[0.14em] text-[#748456]">
-                      {item.label}
-                    </p>
-                    <p className="mt-2 text-[17px] leading-7 tracking-[-0.02em] text-[#1f2a24]">
-                      {card[item.key]}
-                    </p>
+          {applyExampleCards.map((card, cardIndex) => (
+            <article key={card.eyebrow} className="rounded-[20px] bg-white p-6 ring-1 ring-inset ring-[#ececf4] sm:p-8">
+              <div className="flex items-center justify-between border-b border-slate-100 pb-5">
+                <p className="text-[13px] font-medium tracking-[0.18em] text-[#004EE0]">{card.eyebrow}</p>
+                <span className="text-[12px] text-slate-400">CASE 0{cardIndex + 1}</span>
+              </div>
+              <div className="mt-2">
+                {labels.map((item, index) => (
+                  <div key={item.key} className="grid gap-2 border-b border-slate-100 py-5 last:border-0 sm:grid-cols-[110px_1fr]">
+                    <p className="text-[12px] font-medium tracking-[0.12em] text-slate-400">0{index + 1} · {item.label}</p>
+                    <p className="text-[16px] leading-7 tracking-[-0.02em] text-slate-700">{card[item.key]}</p>
                   </div>
                 ))}
               </div>

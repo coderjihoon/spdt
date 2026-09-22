@@ -2,35 +2,24 @@ import { applyProcessSteps } from "@/data/apply";
 
 export function ProcessSection() {
   return (
-    <section id="process" className="bg-[#faf8f3] px-4 py-16 sm:px-6 lg:px-10 lg:py-24">
-      <div className="mx-auto max-w-[1180px]">
-        <div className="max-w-[760px]">
-          <p className="text-[13px] font-semibold tracking-[0.18em] text-[#748456]">PROCESS</p>
-          <h2 className="mt-3 text-[34px] font-semibold leading-[1.12] tracking-[-0.04em] text-[#1f2a24] sm:text-[46px]">
-            신청은 간단합니다
-          </h2>
-          <p className="mt-4 text-[17px] leading-8 text-[#586257]">
-            자료가 완벽하지 않아도 됩니다. 현재 상태를 기준으로 먼저 막히는
-            지점을 찾아드립니다.
-          </p>
+    <section id="process" className="px-4 py-14 sm:px-6 lg:px-10 lg:py-24">
+      <div className="mx-auto grid max-w-[1280px] gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+        <div>
+          <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">PROCESS</p>
+          <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[44px] lg:text-[52px]">자료가 덜 준비돼도<br />진단할 수 있습니다.</h2>
+          <p className="mt-5 max-w-[480px] text-[16px] leading-7 text-slate-600">준비된 자료 안에서 고객이 어디서 멈추는지부터 확인합니다.</p>
         </div>
 
-        <div className="mt-10 grid gap-4 lg:grid-cols-4">
+        <ol className="relative border-l border-slate-200 pl-7 sm:pl-10">
           {applyProcessSteps.map((item) => (
-            <article
-              key={item.step}
-              className="rounded-[24px] border border-[#ded7c7] bg-[#fffdf8] p-6"
-            >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-[15px] bg-[#1f2a24] text-[16px] font-semibold text-[#faf8f3]">
-                {item.step}
-              </span>
-              <h3 className="mt-6 text-[20px] font-semibold leading-7 tracking-[-0.035em] text-[#1f2a24]">
-                {item.title}
-              </h3>
-              <p className="mt-3 text-[15px] leading-7 text-[#586257]">{item.description}</p>
-            </article>
+            <li key={item.step} className="relative pb-10 last:pb-0">
+              <span className="absolute -left-[2.45rem] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-white ring-1 ring-slate-200 sm:-left-[3.25rem]"><span className="h-2 w-2 rounded-full bg-[#004EE0]" /></span>
+              <p className="text-[12px] font-medium tracking-[0.16em] text-[#004EE0]">STEP 0{item.step}</p>
+              <h3 className="mt-2 text-[21px] font-medium leading-7 tracking-[-0.035em] text-slate-900">{item.title}</h3>
+              <p className="mt-2 max-w-[620px] text-[15px] leading-7 text-slate-600">{item.description}</p>
+            </li>
           ))}
-        </div>
+        </ol>
       </div>
     </section>
   );

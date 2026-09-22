@@ -1,6 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  outputFileTracingIncludes: {
+    "/api/**/*": ["./node_modules/sharp/**/*"],
+  },
+  async redirects() {
+    return [{ source: "/apply", destination: "/", permanent: true }];
+  },
   async headers() {
     return [{
       source: "/:path*",

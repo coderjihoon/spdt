@@ -25,5 +25,20 @@
     "tailwindcss": "latest",
     "tsx": "^4.23.13",
     "typescript": "latest"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "sharp"
+    ],
+    "supportedArchitectures": {
+      "os": [
+        "current",
+        "linux"
+      ],
+      "cpu": [
+        "current",
+        "x64"
+      ]
+    }
   }
 }

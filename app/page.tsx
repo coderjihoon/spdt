@@ -6,6 +6,7 @@ import { Footer } from "@/components/apply/Footer";
 import { FormSection } from "@/components/apply/FormSection";
 import { Header } from "@/components/apply/Header";
 import { Hero } from "@/components/apply/Hero";
+import { PortfolioSection } from "@/components/apply/PortfolioSection";
 import { ProblemSection } from "@/components/apply/ProblemSection";
 import { ProcessSection } from "@/components/apply/ProcessSection";
 import { ProofSection } from "@/components/apply/ProofSection";
@@ -29,6 +30,7 @@ export default function Home() {
       <Header />
       <Hero />
       <ReportPreviewSection />
+      <PortfolioSection />
       <ProofSection />
       <ProblemSection />
       <DiagnosisSection />

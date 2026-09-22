@@ -15,7 +15,6 @@ export function Header() {
         <div className="mx-auto flex max-w-[1280px] items-center justify-between py-4">
           <a href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="SPDT" width={662} height={298} className="h-7 w-auto" priority />
-            <p className="hidden text-xs text-slate-500 sm:block">{applySiteConfig.name} · 무료 진단</p>
           </a>
 
           <nav className="hidden items-center gap-7 text-[12px] text-slate-600 lg:flex">

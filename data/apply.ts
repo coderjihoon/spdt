@@ -12,6 +12,7 @@ export const applySiteConfig = {
 
 export const applyNavLinks = [
   { label: "실적", href: "#proof" },
+  { label: "작업물", href: "#portfolio" },
   { label: "진단 대상", href: "#problems" },
   { label: "진단 항목", href: "#diagnosis" },
   { label: "전달 예시", href: "#examples" },
@@ -113,19 +114,19 @@ export const applyProcessSteps = [
 
 export const applyTrustPoints = [
   {
-    title: "예쁜 화면을 만들기 전에 설득 순서부터 정리합니다.",
+    title: "디자인보다 먼저, 순서부터 봅니다.",
     description:
-      "디자인을 더하기 전, 고객이 이해하고 확신하는 순서부터 정리합니다.",
+      "무엇을 먼저 보여주고 어떤 근거를 뒤에 둘지부터 잡습니다.",
   },
   {
-    title: "진단 기준은 고객의 망설임입니다.",
+    title: "고객이 멈추는 이유를 찾습니다.",
     description:
-      "제품 장점보다 구매 전 고객이 떠올리는 의심과 질문부터 살펴봅니다.",
+      "사기 전까지 남는 의심과 질문을 페이지 안에서 풀 수 있는지 봅니다.",
   },
   {
-    title: "진단 뒤 제작까지 함께 봅니다.",
+    title: "진단만 받고 끝내도 됩니다.",
     description:
-      "필요하면 무료 진단 뒤 제작·리뉴얼 범위와 우선순위까지 현실적으로 제안합니다.",
+      "제작이나 리뉴얼이 필요할 때만 범위와 우선순위를 말씀드립니다.",
   },
 ];
 

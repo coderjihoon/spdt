@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 import { NextResponse } from "next/server";
-import { extensionFor, koreanDay, validateDiagnosisRequest, validatePublicHttpsUrl } from "@/lib/diagnosis-request";
+import { extensionFor, isUnlimitedDiagnosisEmail, koreanDay, validateDiagnosisRequest, validatePublicHttpsUrl } from "@/lib/diagnosis-request";
 import { supabaseAdmin } from "@/lib/supabase";
 
 export const runtime = "nodejs";
@@ -10,10 +10,13 @@ export async function POST(request: Request) {
     const input = validateDiagnosisRequest(await request.json());
     const productUrl = await validatePublicHttpsUrl(input.productUrl);
     const supabase = supabaseAdmin();
-    const { error: limitError } = await supabase.from("diagnosis_daily_limits").insert({ email: input.email, day: koreanDay() });
-    if (limitError) {
-      if (limitError.code === "23505") return NextResponse.json({ error: "이 이메일은 오늘 이미 무료 진단을 사용했습니다." }, { status: 429 });
-      throw limitError;
+    const unlimited = isUnlimitedDiagnosisEmail(input.email);
+    if (!unlimited) {
+      const { error: limitError } = await supabase.from("diagnosis_daily_limits").insert({ email: input.email, day: koreanDay() });
+      if (limitError) {
+        if (limitError.code === "23505") return NextResponse.json({ error: "이 이메일은 오늘 이미 무료 진단을 사용했습니다." }, { status: 429 });
+        throw limitError;
+      }
     }
     const accessToken = randomUUID();
     const inputPaths = input.files.map((file, index) => `${accessToken}/${String(index + 1).padStart(2, "0")}.${extensionFor(file.type)}`);
@@ -26,7 +29,7 @@ export async function POST(request: Request) {
       status: inputPaths.length ? "uploading" : "ready",
     });
     if (error) {
-      await supabase.from("diagnosis_daily_limits").delete().eq("email", input.email).eq("day", koreanDay());
+      if (!unlimited) await supabase.from("diagnosis_daily_limits").delete().eq("email", input.email).eq("day", koreanDay());
       throw error;
     }
     const uploads = await Promise.all(inputPaths.map(async (path) => {

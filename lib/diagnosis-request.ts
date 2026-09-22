@@ -52,12 +52,6 @@ export async function validatePublicHttpsUrl(value: string | null) {
   return url.toString();
 }
 
-export function extensionFor(type: string) {
-  return type === "image/jpeg" ? "jpg" : type === "image/png" ? "png" : "webp";
-}
-
-export const koreanDay = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());
-
 export function isSmartStoreUrl(value: string | null) {
   if (!value) return false;
   try { return new URL(value).hostname === "smartstore.naver.com"; } catch { return false; }
@@ -66,3 +60,13 @@ export function isSmartStoreUrl(value: string | null) {
 export function isNaverLoginPage(html: string) {
   return /<title[^>]*>\s*NAVER 로그인\s*<\/title>/i.test(html);
 }
+
+export function extensionFor(type: string) {
+  return type === "image/jpeg" ? "jpg" : type === "image/png" ? "png" : "webp";
+}
+
+export function isUnlimitedDiagnosisEmail(email: string, configured = process.env.UNLIMITED_DIAGNOSIS_EMAILS ?? "") {
+  return configured.split(",").some((value) => value.trim().toLowerCase() === email);
+}
+
+export const koreanDay = () => new Intl.DateTimeFormat("en-CA", { timeZone: "Asia/Seoul", year: "numeric", month: "2-digit", day: "2-digit" }).format(new Date());

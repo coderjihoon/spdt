@@ -8,11 +8,14 @@ type SubmitInput = { name?: string; email: string; productUrl: string; files: Fi
 export function useDiagnosisSubmit() {
   const [error, setError] = useState("");
   const [progress, setProgress] = useState("");
+  const [progressPercent, setProgressPercent] = useState(0);
 
   async function submit({ name, email, productUrl, files }: SubmitInput) {
     if (!productUrl && !files.length) return setError("제품 URL 또는 상세페이지 이미지 중 하나는 꼭 남겨주세요.");
     setError("");
+    setProgressPercent(0);
     setProgress("신청을 준비하고 있어요.");
+    const progressTimer = window.setInterval(() => setProgressPercent((current) => Math.min(current + 1, 95)), 800);
     try {
       const start = await fetch("/api/diagnoses", {
         method: "POST",
@@ -32,12 +35,17 @@ export function useDiagnosisSubmit() {
       const run = await fetch(`/api/diagnoses/${payload.accessToken}/run`, { method: "POST" });
       const result = await run.json() as { reportUrl?: string; error?: string };
       if (!run.ok || !result.reportUrl) throw new Error(result.error || "진단을 완료하지 못했습니다.");
-      window.location.assign(result.reportUrl);
+      const reportUrl = result.reportUrl;
+      window.clearInterval(progressTimer);
+      setProgressPercent(100);
+      window.setTimeout(() => window.location.assign(reportUrl), 250);
     } catch (submitError) {
+      window.clearInterval(progressTimer);
       setProgress("");
+      setProgressPercent(0);
       setError(submitError instanceof Error ? submitError.message : "신청을 처리하지 못했습니다.");
     }
   }
 
-  return { error, progress, busy: Boolean(progress), submit };
+  return { error, progress, progressPercent, busy: Boolean(progress), submit };
 }

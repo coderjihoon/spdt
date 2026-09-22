@@ -14,7 +14,7 @@ export function Hero() {
   const [email, setEmail] = useState("");
   const [fileNames, setFileNames] = useState<string[]>([]);
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const { error, progress, busy, submit } = useDiagnosisSubmit();
+  const { error, progress, progressPercent, busy, submit } = useDiagnosisSubmit();
 
   function handleFileChange(event: ChangeEvent<HTMLInputElement>) {
     setFileNames(Array.from(event.target.files ?? []).map((file) => file.name));
@@ -79,8 +79,9 @@ export function Hero() {
             />
 
             <button disabled={busy} type="submit" className="mt-1 flex h-14 w-full items-center justify-center rounded-[12px] bg-[#004EE0] text-[13px] font-medium text-white transition hover:bg-[#042E7B] disabled:cursor-wait disabled:opacity-60">
-              {busy ? "진단 중입니다" : "무료 진단 시작하기 →"}
+              {busy ? `진단 중입니다 · ${progressPercent}%` : "무료 진단 시작하기 →"}
             </button>
+            <p className="text-[12px] leading-5 text-slate-500">진단 목적으로만 사용하며 외부에 공개하지 않습니다.</p>
             {error && <p role="alert" className="rounded-[10px] bg-red-50 px-4 py-3 text-[13px] font-medium text-red-700">{error}</p>}
             {progress && <p aria-live="polite" className="rounded-[10px] bg-[#f1f3f9] px-4 py-3 text-[13px] font-medium text-slate-600">{progress}</p>}
           </form>

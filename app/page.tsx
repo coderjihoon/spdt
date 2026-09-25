@@ -29,9 +29,9 @@ export default function Home() {
     <main className="overflow-x-clip bg-white pb-20 md:pb-0">
       <Header />
       <Hero />
+      <ProofSection />
       <ReportPreviewSection />
       <PortfolioSection />
-      <ProofSection />
       <ProblemSection />
       <DiagnosisSection />
       <ExampleSection />
@@ -40,6 +40,17 @@ export default function Home() {
       <FAQSection />
       <FormSection />
       <Footer />
+      <a
+        href="https://open.kakao.com/me/spdt"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed right-4 bottom-24 z-40 inline-flex items-center gap-2 rounded-full bg-[#FEE500] px-5 py-3.5 text-sm font-semibold text-[#191919] shadow-[0_6px_20px_rgba(15,23,42,0.18)] transition hover:bg-[#FADA0A] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#004EE0] md:right-6 md:bottom-6"
+      >
+        <svg aria-hidden="true" viewBox="0 0 24 24" className="h-5 w-5 fill-current">
+          <path d="M12 3C6.5 3 2 6.5 2 11c0 2.9 1.8 5.4 4.6 6.8L5.5 22l5-2.4c.5.1 1 .1 1.5.1 5.5 0 10-3.5 10-8S17.5 3 12 3Z" />
+        </svg>
+        문의하기
+      </a>
     </main>
   );
 }

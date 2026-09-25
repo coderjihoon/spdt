@@ -30,6 +30,12 @@ const sampleItems = [
   { name: "CTA", score: 3, note: "버튼은 명확하나 문구가 일반적" },
 ];
 
+function itemStatus(score: number) {
+  if (score <= 2) return { label: "보완 필요", color: "#E52222", background: "#E5222214" };
+  if (score === 3) return { label: "점검 필요", color: "#D17600", background: "#D1760014" };
+  return { label: "잘 갖춰짐", color: "#009632", background: "#00963214" };
+}
+
 function Card({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <section className="rounded-2xl border bg-white p-6 sm:p-7" style={{ borderColor: T.border }}>
@@ -105,19 +111,18 @@ export function ReportPreviewSection() {
 
               <Card title="항목별 진단">
                 <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
-                  {sampleItems.map((it) => (
-                    <div key={it.name}>
-                      <div className="flex items-center justify-between gap-3">
-                        <span className="text-[13px] font-medium" style={{ color: T.text }}>{it.name}</span>
-                        <span className="flex gap-0.5">
-                          {[0, 1, 2, 3, 4].map((n) => (
-                            <span key={n} className="h-1 w-3.5 rounded-full" style={{ backgroundColor: n < it.score ? T.accent : T.track }} />
-                          ))}
-                        </span>
+                  {sampleItems.map((it) => {
+                    const status = itemStatus(it.score);
+                    return (
+                      <div key={it.name}>
+                        <div className="flex items-center justify-between gap-3">
+                          <span className="text-[13px] font-medium" style={{ color: T.text }}>{it.name}</span>
+                          <span className="rounded-md px-2 py-0.5 text-[11px] font-medium" style={{ color: status.color, backgroundColor: status.background }}>{status.label}</span>
+                        </div>
+                        <p className="mt-1 text-[12px] leading-5" style={{ color: T.muted }}>{it.note}</p>
                       </div>
-                      <p className="mt-1 text-[12px] leading-5" style={{ color: T.muted }}>{it.note}</p>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </Card>
 

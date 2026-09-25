@@ -14,7 +14,7 @@ export function TestimonialSection() {
         <div className="mt-10 columns-1 gap-5 md:columns-2 xl:columns-3">
           {testimonials.map((item, index) => (
             <article
-              key={item.name}
+              key={`${item.name}-${index}`}
               className={`mb-5 break-inside-avoid rounded-[20px] bg-[#f7f7fb] p-8 text-slate-900 ring-1 ring-inset ring-[#ececf4] ${
                 index === 1 ? "xl:translate-y-4" : ""
               }`}

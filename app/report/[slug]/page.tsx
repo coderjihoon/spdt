@@ -1,3 +1,5 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { notFound } from "next/navigation";
 import type { Report } from "@/lib/diagnosis";
 import { supabaseAdmin } from "@/lib/supabase";
@@ -39,6 +41,22 @@ const LEVEL: Record<string, { c: string; bg: string }> = {
   낮음: { c: "#878A93", bg: "#878A9314" },
 };
 
+function itemStatus(score: number) {
+  if (score <= 2) return { label: "보완 필요", color: "#E52222", background: "#E5222214" };
+  if (score === 3) return { label: "점검 필요", color: "#D17600", background: "#D1760014" };
+  return { label: "잘 갖춰짐", color: "#009632", background: "#00963214" };
+}
+
+async function loadLocalReport(slug: string): Promise<DisplayReport | null> {
+  if (!/^[a-zA-Z0-9_-]+$/.test(slug)) return null;
+  try {
+    const report = JSON.parse(await readFile(join(process.cwd(), "data", "reports", `${slug}.json`), "utf8")) as Report;
+    return { ...report, imageUrls: [] };
+  } catch {
+    return null;
+  }
+}
+
 async function loadReport(slug: string): Promise<DisplayReport | null> {
   try {
     const supabase = supabaseAdmin();
@@ -48,7 +66,7 @@ async function loadReport(slug: string): Promise<DisplayReport | null> {
       .eq("access_token", slug)
       .eq("status", "complete")
       .maybeSingle();
-    if (error || !data?.report) return null;
+    if (error || !data?.report) return loadLocalReport(slug);
     const paths = Array.isArray(data.input_paths) ? data.input_paths : [];
     const signed = await Promise.all(paths.map(async (path) => {
       const { data: signedUrl } = await supabase.storage.from("diagnosis-inputs").createSignedUrl(path, 60 * 60 * 24 * 7);
@@ -61,7 +79,7 @@ async function loadReport(slug: string): Promise<DisplayReport | null> {
       imageUrls: signed.filter((u): u is string => Boolean(u)),
     };
   } catch {
-    return null;
+    return loadLocalReport(slug);
   }
 }
 
@@ -157,19 +175,18 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
           {/* 16개 항목 */}
           <Card title="항목별 진단">
             <div className="grid gap-x-10 gap-y-5 sm:grid-cols-2">
-              {r.items.map((it) => (
-                <div key={it.name}>
-                  <div className="flex items-center justify-between gap-3">
-                    <span className="text-[13px] font-medium" style={{ color: T.text }}>{it.name}</span>
-                    <span className="flex gap-0.5">
-                      {[0, 1, 2, 3, 4].map((n) => (
-                        <span key={n} className="h-1 w-3.5 rounded-full" style={{ backgroundColor: n < it.score ? T.accent : T.track }} />
-                      ))}
-                    </span>
+              {r.items.map((it) => {
+                const status = itemStatus(it.score);
+                return (
+                  <div key={it.name}>
+                    <div className="flex items-center justify-between gap-3">
+                      <span className="text-[13px] font-medium" style={{ color: T.text }}>{it.name}</span>
+                      <span className="rounded-md px-2 py-0.5 text-[11px] font-medium" style={{ color: status.color, backgroundColor: status.background }}>{status.label}</span>
+                    </div>
+                    <p className="mt-1.5 text-[12px] leading-6" style={{ color: T.muted }}>{it.note}</p>
                   </div>
-                  <p className="mt-1.5 text-[12px] leading-6" style={{ color: T.muted }}>{it.note}</p>
-                </div>
-              ))}
+                );
+              })}
             </div>
           </Card>
 

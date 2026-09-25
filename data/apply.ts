@@ -167,30 +167,20 @@ export const applyFaqItems = [
 // PLACEHOLDER — 실제 진단 건수·후기·팀 정보로 교체 전까지 배포 금지.
 export const applyProofStats = [
   { value: "1,200+", label: "누적 진단 완료" },
-  { value: `${applyAiEngineDataCount}건`, label: "AI 엔진 학습 데이터" },
-  { value: "평균 92초", label: "리포트 발급 시간" },
+  { value: "4.9", label: "고객 평점" },
+  { value: "7,010만원", label: "단일 작업 최고 매출액" },
 ];
 
 // PLACEHOLDER — 실제 후기로 교체 전까지 배포 금지.
 export const applyTestimonials = [
-  {
-    quote: "첫 화면 문구만 바꿨는데 이탈률이 눈에 보이게 줄었어요.",
-    author: "김OO",
-    role: "뷰티 브랜드 대표",
-  },
-  {
-    quote: "펀딩 준비 중에 받은 진단으로 상세페이지 순서를 다시 짰습니다.",
-    author: "이OO",
-    role: "와디즈 펀딩 준비",
-  },
+  { quote: "첫 화면 문구만 바꿨는데 이탈률이 눈에 보이게 줄었어요.", author: "김OO", role: "뷰티 브랜드 대표", avatar: "/faces/notion-face-1.png" },
+  { quote: "펀딩 준비 중에 받은 진단으로 상세페이지 순서를 다시 짰습니다.", author: "이OO", role: "와디즈 펀딩 준비", avatar: "/faces/notion-face-2.png" },
+  { quote: "무엇부터 고쳐야 할지 몰랐는데, 순서가 보이니 바로 손댈 수 있었어요.", author: "정OO", role: "생활용품 브랜드 운영", avatar: "/faces/notion-face-3.png" },
+  { quote: "긴 설명을 줄이고 나니 제품 장점이 훨씬 또렷하게 보였습니다.", author: "최OO", role: "식품 브랜드 대표", avatar: "/faces/notion-face-4.png" },
+  { quote: "후기와 인증을 어디에 둬야 할지 알게 된 것만으로도 큰 도움이 됐어요.", author: "박OO", role: "건강식품 브랜드 운영", avatar: "/faces/notion-face-5.png" },
+  { quote: "광고비를 더 쓰기 전에 페이지부터 봐야 한다는 걸 알았습니다.", author: "윤OO", role: "패션 브랜드 대표", avatar: "/faces/notion-face-1.png" },
+  { quote: "우리 제품을 처음 보는 사람 입장에서 다시 보게 됐어요.", author: "한OO", role: "반려동물 브랜드 운영", avatar: "/faces/notion-face-2.png" },
 ];
-
-// PLACEHOLDER — 실제 운영자 정보로 교체 전까지 배포 금지.
-export const applyFounderNote = {
-  name: "박OO",
-  role: "상페닥터 · 프로덕트 리드",
-  bio: `이커머스 상세페이지 ${applyAiEngineDataCount}건을 분석해 만든 AI 진단 엔진을 직접 설계하고 운영합니다.`,
-};
 
 export const applyFooterLinks = [
   { label: "진단 항목", href: "#diagnosis" },

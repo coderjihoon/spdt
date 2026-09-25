@@ -67,9 +67,24 @@ details > summary::-webkit-details-marker {
   }
 }
 
+@keyframes testimonial-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 10px));
+  }
+}
+
 @layer utilities {
   .animate-marquee {
     animation: marquee 28s linear infinite;
+  }
+
+  .animate-testimonial-marquee {
+    animation: testimonial-marquee 48s linear infinite;
+    will-change: transform;
   }
 }
 
@@ -79,6 +94,10 @@ details > summary::-webkit-details-marker {
   }
 
   .animate-marquee {
+    animation: none;
+  }
+
+  .animate-testimonial-marquee {
     animation: none;
   }
 }

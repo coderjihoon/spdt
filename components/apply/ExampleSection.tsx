@@ -15,7 +15,7 @@ export function ExampleSection() {
             <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">REPORT EXAMPLE</p>
             <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[44px] lg:text-[52px]">문제와 이유,<br />다음 방향까지 정리합니다.</h2>
           </div>
-          <p className="max-w-[380px] text-[15px] leading-7 text-slate-600">문제와 이유를 짚고, 개선 방향까지 한 흐름으로 전달합니다.</p>
+          <p className="max-w-[380px] text-[15px] leading-7 text-slate-600">무엇이 문제인지, 왜 고쳐야 하는지, 어떻게 바꿀지 차례로 알려드립니다.</p>
         </div>
 
         <div className="mt-10 grid gap-5 lg:grid-cols-2">

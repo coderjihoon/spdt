@@ -2,7 +2,7 @@ export const siteConfig = {
   name: "SPDT",
   label: "Selling Page Detail",
   description:
-    "브랜드와 셀러가 플랫폼 의존 없이 직접 신뢰를 만들 수 있도록 구매 흐름 중심의 상세페이지를 기획하고 디자인합니다.",
+    "브랜드와 셀러가 플랫폼 의존 없이 직접 신뢰를 만들 수 있도록 고객의 구매 판단에 필요한 상세페이지를 기획하고 디자인합니다.",
   email: "hello@spdt.studio",
   ctaHref: "/apply",
   promo: "제품 URL만 보내도 무료로 진단해드립니다.",
@@ -62,7 +62,7 @@ export const solutionCards = [
   {
     title: "상세페이지 구조 기획",
     description:
-      "첫 화면부터 문제 제기, 해결 근거, 제품 정보, FAQ까지, 어느 한 곳에서도 흐름이 끊기지 않게 이어 붙입니다.",
+      "첫 화면부터 문제 제기, 해결 근거, 제품 정보, FAQ까지 고객이 궁금해할 순서로 배치합니다.",
   },
   {
     title: "카피라이팅 & 디자인",
@@ -75,7 +75,7 @@ export const portfolioItems = [
   {
     category: "생활용품 브랜드",
     scope: "기획 / 카피 / 디자인",
-    insight: "제품 기능 중심 설명을 구매 상황 중심 흐름으로 재구성",
+    insight: "제품 기능 중심 설명을 구매 상황에 맞게 재구성",
     accent: "from-[#f7f7fb] via-[#ffffff] to-[#edf0ff]",
     chip: "사용 맥락 정리",
   },
@@ -116,7 +116,7 @@ export const processSteps = [
   {
     step: "03",
     title: "상세페이지 구조 기획",
-    description: "구매 흐름 기준으로 섹션 순서와 정보 강약을 설계합니다.",
+    description: "고객이 판단할 순서에 맞춰 섹션과 정보의 강약을 정합니다.",
   },
   {
     step: "04",
@@ -126,7 +126,7 @@ export const processSteps = [
   {
     step: "05",
     title: "디자인 제작",
-    description: "설계된 흐름이 읽히도록 화면 리듬과 시선 이동을 디자인합니다.",
+    description: "중요한 정보가 먼저 보이도록 화면과 시선 이동을 디자인합니다.",
   },
   {
     step: "06",

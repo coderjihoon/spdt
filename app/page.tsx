@@ -15,7 +15,7 @@ import { TrustSection } from "@/components/apply/TrustSection";
 
 const title = "상페닥터 | 무료 상세페이지 진단 신청";
 const description =
-  "제품 URL 또는 상세페이지 이미지를 보내면 구조, 카피, 디자인 흐름을 무료로 진단하고 구매를 막는 요소 3가지를 정리해드립니다.";
+  "제품 URL 또는 상세페이지 이미지를 보내면 정보 순서와 문장, 디자인을 무료로 진단하고 구매를 막는 요소 3가지를 정리해드립니다.";
 
 export const metadata: Metadata = {
   title,

@@ -6,8 +6,8 @@ export function DiagnosisSection() {
       <div className="mx-auto grid max-w-[1280px] gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
         <div className="lg:sticky lg:top-28">
           <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">DIAGNOSIS</p>
-          <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[44px] lg:text-[52px]">감이 아니라<br />구매 흐름을 봅니다.</h2>
-          <p className="mt-5 max-w-[480px] text-[16px] leading-7 text-slate-600">상세페이지 {applyAiEngineDataCount}건을 학습한 AI 진단 엔진이 고객이 페이지를 처음 본 순간부터 결제할 때까지, 어디에서 구매 흐름이 끊기는지 다섯 가지 기준으로 봅니다.</p>
+          <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[44px] lg:text-[52px]">감이 아니라<br />고객이 멈추는 곳을 봅니다.</h2>
+          <p className="mt-5 max-w-[480px] text-[16px] leading-7 text-slate-600">상세페이지 {applyAiEngineDataCount}건을 학습한 AI 진단 엔진이 첫 화면부터 결제 버튼까지, 고객이 망설일 만한 지점을 다섯 가지 기준으로 봅니다.</p>
         </div>
 
         <div className="divide-y divide-slate-100 border-y border-slate-100">

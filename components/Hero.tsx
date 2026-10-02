@@ -1,6 +1,6 @@
 import { siteConfig } from "@/data/site";
 
-const keywords = ["기획", "카피", "디자인", "전환 흐름"];
+const keywords = ["기획", "카피", "디자인", "구매 설계"];
 
 export function Hero() {
   return (
@@ -124,7 +124,7 @@ export function Hero() {
           </div>
 
           <div className="absolute bottom-[11%] right-[7%] hidden w-[12rem] rounded-[16px] bg-white p-4 ring-1 ring-inset ring-[#ececf4] shadow-[0_16px_36px_rgba(15,23,42,0.05)] sm:block">
-            <p className="text-[11px] tracking-[0.18em] text-slate-500">전환 흐름</p>
+            <p className="text-[11px] tracking-[0.18em] text-slate-500">구매 설계</p>
             <p className="mt-3 text-sm font-medium leading-6 text-slate-700">
               디자인보다 먼저 고객이
               <br />

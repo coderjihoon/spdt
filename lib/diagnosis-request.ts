@@ -52,13 +52,9 @@ export async function validatePublicHttpsUrl(value: string | null) {
   return url.toString();
 }
 
-export function isSmartStoreUrl(value: string | null) {
+export function isNaverStoreUrl(value: string | null) {
   if (!value) return false;
-  try { return new URL(value).hostname === "smartstore.naver.com"; } catch { return false; }
-}
-
-export function isNaverLoginPage(html: string) {
-  return /<title[^>]*>\s*NAVER 로그인\s*<\/title>/i.test(html);
+  try { return ["smartstore.naver.com", "brand.naver.com", "m.smartstore.naver.com", "m.brand.naver.com"].includes(new URL(value).hostname); } catch { return false; }
 }
 
 export function extensionFor(type: string) {

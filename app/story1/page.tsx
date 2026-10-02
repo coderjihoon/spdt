@@ -15,7 +15,7 @@ const problems = [
 ];
 const steps = [
   ["자료 보내기", "제품 URL이나 상세페이지 이미지를 보내주세요."],
-  ["막히는 곳 찾기", "첫 화면, 카피, 구매 흐름을 고객의 시선으로 살펴봅니다."],
+  ["막히는 곳 찾기", "첫 화면과 문장, 정보 순서를 고객의 시선으로 살펴봅니다."],
   ["순서 다시 세우기", "먼저 고칠 요소 3가지와 개선 방향을 확인하세요."],
 ];
 
@@ -64,7 +64,7 @@ export default function StoryOnePage() {
 
       <section className="bg-[#DDE5F1] px-5 py-24 sm:px-8 sm:py-36">
         <div className="mx-auto grid max-w-[1320px] gap-14 lg:grid-cols-[0.38fr_0.62fr] lg:gap-20">
-          <div><h2 className="text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">고객의 시선에서<br />다시 읽습니다.</h2><p className="mt-7 max-w-sm text-base leading-8 text-[#465565]">첫 화면, 설명의 순서, 근거가 필요한 자리를 살펴보고 구매 흐름을 정리합니다.</p><a href="/#report-preview" className="mt-8 inline-block border-b border-[#17212B] pb-1 text-sm font-semibold hover:text-[#004EE0] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004EE0]">진단서 예시 보기 ↗</a></div>
+          <div><h2 className="text-3xl font-semibold leading-tight tracking-[-0.03em] sm:text-4xl">고객의 시선에서<br />다시 읽습니다.</h2><p className="mt-7 max-w-sm text-base leading-8 text-[#465565]">첫 화면, 설명의 순서, 근거가 필요한 자리를 살펴보고 고칠 부분을 정리합니다.</p><a href="/#report-preview" className="mt-8 inline-block border-b border-[#17212B] pb-1 text-sm font-semibold hover:text-[#004EE0] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004EE0]">진단서 예시 보기 ↗</a></div>
           <blockquote className="border-t-2 border-[#17212B] pt-8"><p className="text-[clamp(1.9rem,3.3vw,3.8rem)] font-medium leading-[1.34] tracking-[-0.035em]">“단순히 원하는 상세페이지를 만들어주는 것이 아니라 기획 단계부터 함께 고민하고, 설득력과 전달력 있는 페이지를 만들어주는 완전한 협업이었습니다.”</p><footer className="mt-9 text-sm text-[#465565]">실제 고객 후기 · 재구매 고객</footer></blockquote>
         </div>
       </section>

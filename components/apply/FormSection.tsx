@@ -64,7 +64,10 @@ export function FormSection() {
             <label className="mt-5 flex items-start gap-3 text-[13px] leading-5 text-slate-500"><input required name="consent" type="checkbox" className="mt-0.5 h-4 w-4 accent-[#004EE0]" /><span>진단 및 상담을 위해 입력 정보와 이미지를 보관하는 것에 동의합니다. 보관된 자료는 진단 목적 외에는 사용하거나 외부에 공개하지 않으며, 삭제를 원하시면 언제든 요청하실 수 있습니다.</span></label>
             {error && <p id="form-error" role="alert" className="mt-4 rounded-[10px] bg-red-50 px-4 py-3 text-[13px] font-medium text-red-700">{error}</p>}
             {progress && <p aria-live="polite" className="mt-4 rounded-[10px] bg-[#f1f3f9] px-4 py-3 text-[13px] font-medium text-slate-600">{progress}</p>}
-            <button disabled={busy} type="submit" className="mt-6 flex w-full items-center justify-center rounded-[12px] bg-[#004EE0] px-6 py-4 text-[13px] font-medium text-white transition hover:bg-[#042E7B] disabled:cursor-wait disabled:opacity-60">{busy ? `진단 중입니다 · ${progressPercent}%` : "무료 진단 시작하기"}</button>
+            <button disabled={busy} type="submit" className={`relative mt-6 flex w-full items-center justify-center overflow-hidden rounded-[12px] px-6 py-4 text-[13px] font-medium text-white transition-colors disabled:cursor-wait ${busy ? "bg-[#3471C8]" : "bg-[#004EE0] hover:bg-[#042E7B]"}`}>
+              {busy && <span aria-hidden="true" className={`absolute inset-0 origin-left bg-[#004EE0] transition-transform ease-linear motion-reduce:transition-none ${progressPercent === 100 ? "duration-200" : "duration-[700ms]"}`} style={{ transform: `scaleX(${progressPercent / 100})` }} />}
+              <span className="relative">{busy ? `진단 중입니다 · ${progressPercent}%` : "무료 진단 시작하기"}</span>
+            </button>
           </form>
         </div>
       </div>

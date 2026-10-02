@@ -9,7 +9,7 @@ export function TrustSection() {
             <p className="text-[14px] font-medium tracking-[0.18em] text-white/45">HOW WE LOOK AT A PAGE</p>
             <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] sm:text-[44px] lg:text-[52px]">디자인보다 먼저,<br />고객이 어디서 멈추는지 봅니다.</h2>
           </div>
-          <p className="max-w-[560px] text-[16px] leading-8 text-white/65">첫 화면부터 구매 버튼을 누르기까지, 고객이 이해하고 비교하는 흐름을 따라 진단합니다.</p>
+          <p className="max-w-[560px] text-[16px] leading-8 text-white/65">첫 화면부터 구매 버튼까지, 고객이 이해하고 비교하는 데 필요한 정보를 살펴봅니다.</p>
         </div>
 
         <div className="mt-10 grid divide-y divide-white/10 border-y border-white/10 lg:grid-cols-3 lg:divide-x lg:divide-y-0">

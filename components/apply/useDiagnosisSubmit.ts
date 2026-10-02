@@ -36,6 +36,7 @@ export function useDiagnosisSubmit() {
       const result = await run.json() as { reportUrl?: string; error?: string };
       if (!run.ok || !result.reportUrl) throw new Error(result.error || "진단을 완료하지 못했습니다.");
       const reportUrl = result.reportUrl;
+      (window as Window & { fbq?: (command: string, event: string) => void }).fbq?.("track", "Lead");
       window.clearInterval(progressTimer);
       setProgressPercent(100);
       window.setTimeout(() => window.location.assign(reportUrl), 250);

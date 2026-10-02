@@ -1,6 +1,7 @@
 import { readFile } from "node:fs/promises";
 import { join } from "node:path";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import type { Report } from "@/lib/diagnosis";
 import { supabaseAdmin } from "@/lib/supabase";
 import { ConsultButton } from "@/components/report/ConsultButton";
@@ -32,7 +33,7 @@ const SIGNAL = {
 const TIER = {
   A: { label: "직접 수정 가능", desc: "전체 리뉴얼 없이 카피·일부 섹션 수정으로 개선 가능" },
   B: { label: "부분 리뉴얼 권장", desc: "전체 구조는 유지, 핵심 구간·일부 섹션 재설계 필요" },
-  C: { label: "전체 리뉴얼 권장", desc: "현재 구조가 구매 흐름과 맞지 않아 다시 설계하는 편이 효율적" },
+  C: { label: "전체 리뉴얼 권장", desc: "현재 정보 순서가 구매 판단을 돕지 못해 다시 설계하는 편이 효율적" },
 } as const;
 
 const LEVEL: Record<string, { c: string; bg: string }> = {
@@ -101,9 +102,18 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
   if (!r) notFound();
   const sig = SIGNAL[r.signal] ?? SIGNAL.yellow;
   const tier = TIER[r.renewalTier] ?? TIER.B;
+  const consult = { code: slug.slice(0, 6).toUpperCase(), productUrl: r.url, imageUrls: r.imageUrls };
 
   return (
     <main className="min-h-screen" style={{ backgroundColor: T.pageBg }}>
+      <header className="sticky top-0 z-40 border-b border-slate-100 bg-white px-5 sm:px-6 lg:px-10">
+        <div className="mx-auto flex max-w-[1280px] items-center justify-between py-4">
+          <a href="/" aria-label="상페닥터 홈" className="inline-flex items-center">
+            <Image src="/logo.png" alt="SPDT" width={662} height={298} className="h-7 w-auto" priority />
+          </a>
+          <ConsultButton {...consult} header />
+        </div>
+      </header>
       <div className="mx-auto max-w-[760px] px-5 py-14 sm:py-20">
         {/* 헤더 */}
         <div className="flex items-center justify-between text-[12px]">
@@ -206,12 +216,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
           <section className="rounded-2xl p-7 text-white sm:p-8" style={{ backgroundColor: T.accent }}>
             <p className="text-[11px] font-semibold tracking-[0.14em] text-white/60">다음 행동</p>
             <p className="mt-2.5 text-[15px] leading-8">{r.nextAction}</p>
-            <ConsultButton
-              code={slug.slice(0, 6).toUpperCase()}
-              reportUrl={`${process.env.NEXT_PUBLIC_SITE_URL ?? "https://spdt.studio"}/report/${slug}`}
-              productUrl={r.url}
-              imageUrls={r.imageUrls}
-            />
+            <ConsultButton {...consult} />
           </section>
         </div>
 

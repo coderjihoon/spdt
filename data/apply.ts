@@ -2,22 +2,22 @@ export const applySiteConfig = {
   name: "상페닥터",
   label: "상세페이지 진단·개선 서비스",
   description:
-    "상세페이지에서 고객이 멈추는 지점을 찾습니다. 구조·카피·디자인 흐름을 보고, 구매를 막는 요소와 개선 방향을 정리합니다.",
+    "상세페이지에서 고객이 멈추는 지점을 찾습니다. 정보 순서와 문장, 디자인을 보고, 구매를 막는 요소와 개선 방향을 정리합니다.",
   email: "hello@spdt.studio",
-  ctaHref: "#diagnosis-form",
+  ctaHref: "/#diagnosis-form",
   emailHref:
     "mailto:hello@spdt.studio?subject=%EC%83%81%ED%8E%98%EB%8B%A5%ED%84%B0%20%EB%AC%B4%EB%A3%8C%20%EC%A7%84%EB%8B%A8%20%EC%8B%A0%EC%B2%AD",
   promo: "제품 URL 또는 상세페이지 이미지 하나만 보내주세요. 무료로 진단해드립니다.",
 };
 
 export const applyNavLinks = [
-  { label: "실적", href: "#proof" },
-  { label: "작업물", href: "#portfolio" },
-  { label: "진단 대상", href: "#problems" },
-  { label: "진단 항목", href: "#diagnosis" },
-  { label: "전달 예시", href: "#examples" },
-  { label: "신청", href: "#diagnosis-form" },
-  { label: "FAQ", href: "#faq" },
+  { label: "실적", href: "/#proof" },
+  { label: "작업물", href: "/works" },
+  { label: "진단 대상", href: "/#problems" },
+  { label: "진단 항목", href: "/#diagnosis" },
+  { label: "전달 예시", href: "/#examples" },
+  { label: "신청", href: "/#diagnosis-form" },
+  { label: "FAQ", href: "/#faq" },
 ];
 
 // AI 엔진이 학습한 데이터 건수. ProofSection 통계와 DiagnosisSection 소개 문구에서 공유해 숫자를 한 곳에서만 관리한다.
@@ -45,7 +45,7 @@ export const applyDiagnosisItems = [
       "고객이 제품의 핵심 가치와 구매 이유를 3초 안에 이해할 수 있는지 봅니다.",
   },
   {
-    title: "구매 흐름",
+    title: "정보 순서",
     description:
       "문제 제기부터 해결 근거, 제품 정보, CTA까지 자연스럽게 이어지는지 확인합니다.",
   },
@@ -76,7 +76,7 @@ export const applyExampleCards = [
       "상단 문장은 고객 상황 중심으로 바꿉니다. 핵심 효과와 신뢰 근거도 첫 화면 안에 배치합니다.",
   },
   {
-    eyebrow: "구매 흐름 진단",
+    eyebrow: "정보 순서 진단",
     problem: "기능, 인증, 후기, 가격 정보가 같은 비중으로 늘어서 있습니다.",
     reason:
       "정보가 많아도 우선순위가 없으면 고객은 무엇을 근거로 판단할지 알기 어렵습니다.",
@@ -94,9 +94,9 @@ export const applyProcessSteps = [
   },
   {
     step: "2",
-    title: "구조·카피·디자인 흐름 살펴보기",
+    title: "정보 순서·문장·디자인 살펴보기",
     description:
-      "첫 화면부터 설득 순서, 카피의 명확도, 모바일 가독성까지 구매 흐름을 따라 살펴봅니다.",
+      "첫 화면부터 정보의 순서, 문장의 명확도, 모바일 가독성까지 살펴봅니다.",
   },
   {
     step: "3",
@@ -155,7 +155,7 @@ export const applyFaqItems = [
   {
     question: "어떤 부분을 봐주시나요?",
     answer:
-      "첫 화면 메시지부터 구매 흐름, 셀링포인트, 카피, 모바일 디자인 가독성까지 살펴봅니다.",
+      "첫 화면 메시지부터 정보 순서, 셀링포인트, 카피, 모바일 디자인 가독성까지 살펴봅니다.",
   },
   {
     question: "신규 상품도 진단 가능한가요?",
@@ -166,8 +166,8 @@ export const applyFaqItems = [
 
 // PLACEHOLDER — 실제 진단 건수·후기·팀 정보로 교체 전까지 배포 금지.
 export const applyProofStats = [
-  { value: "1,200+", label: "누적 진단 완료" },
-  { value: "4.9", label: "고객 평점" },
+  { value: "290+", label: "누적 고객사" },
+  { value: "98%", label: "평균 고객만족도" },
   { value: "7,010만원", label: "단일 작업 최고 매출액" },
 ];
 
@@ -183,8 +183,9 @@ export const applyTestimonials = [
 ];
 
 export const applyFooterLinks = [
-  { label: "진단 항목", href: "#diagnosis" },
-  { label: "전달 예시", href: "#examples" },
-  { label: "무료 신청", href: "#diagnosis-form" },
-  { label: "FAQ", href: "#faq" },
+  { label: "작업물", href: "/works" },
+  { label: "진단 항목", href: "/#diagnosis" },
+  { label: "전달 예시", href: "/#examples" },
+  { label: "무료 신청", href: "/#diagnosis-form" },
+  { label: "FAQ", href: "/#faq" },
 ];

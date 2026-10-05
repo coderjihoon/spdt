@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { footerLinks, siteConfig } from "@/data/site";
 
 export function Footer() {
@@ -6,15 +7,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-[1280px] flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-xl">
           <div className="flex items-center gap-3">
-            <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold tracking-[0.2em] text-white">
-              SP
-            </span>
-            <div>
-              <p className="text-sm font-semibold tracking-[0.18em] text-slate-900">
-                {siteConfig.name}
-              </p>
-              <p className="text-xs text-slate-500">{siteConfig.label}</p>
-            </div>
+            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-16 w-auto" />
           </div>
 
           <p className="mt-5 text-base leading-7 text-slate-600">{siteConfig.description}</p>

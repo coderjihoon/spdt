@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 import type { Report } from "@/lib/diagnosis";
 import { supabaseAdmin } from "@/lib/supabase";
+import { deliverDiagnosisEmail } from "@/lib/diagnosis-email";
 
 export const metadata: Metadata = { robots: { index: false, follow: false } };
 
@@ -18,6 +20,17 @@ async function login(formData: FormData) {
   redirect("/admin");
 }
 
+async function retryEmail(formData: FormData) {
+  "use server";
+  if (!process.env.ADMIN_TOKEN || (await cookies()).get(COOKIE)?.value !== process.env.ADMIN_TOKEN) redirect("/admin");
+  const supabase = supabaseAdmin();
+  const { data } = await supabase.from("diagnoses")
+    .select("id, email, access_token, email_sent_at")
+    .eq("access_token", String(formData.get("token") || "")).eq("status", "complete").maybeSingle();
+  if (data) await deliverDiagnosisEmail(supabase, data, data.access_token);
+  revalidatePath("/admin");
+}
+
 type Row = {
   access_token: string;
   email: string;
@@ -26,12 +39,15 @@ type Row = {
   status: string;
   report: Report | null;
   created_at: string;
+  email_sent_at: string | null;
+  email_error: string | null;
+  email_sending_at: string | null;
 };
 
 async function loadRows(): Promise<Row[]> {
   const { data } = await supabaseAdmin()
     .from("diagnoses")
-    .select("access_token, email, name, product_url, status, report, created_at")
+    .select("access_token, email, name, product_url, status, report, created_at, email_sent_at, email_error, email_sending_at")
     .order("created_at", { ascending: false })
     .limit(200);
   return data ?? [];
@@ -78,6 +94,7 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
               <th className="px-4 py-3 font-medium">이메일</th>
               <th className="px-4 py-3 font-medium">제품 URL</th>
               <th className="px-4 py-3 font-medium">상태</th>
+              <th className="px-4 py-3 font-medium">결과 메일</th>
               <th className="px-4 py-3 font-medium">점수</th>
               <th className="px-4 py-3 font-medium">등급</th>
               <th className="px-4 py-3 font-medium">리포트</th>
@@ -94,6 +111,17 @@ export default async function AdminPage({ searchParams }: { searchParams: Promis
                   {row.product_url ? <a href={row.product_url} target="_blank" rel="noreferrer" className="text-[#463fa6] hover:underline">{row.product_url}</a> : "-"}
                 </td>
                 <td className="px-4 py-3">{row.status}</td>
+                <td className="px-4 py-3">
+                  {row.email_sent_at ? "발송 요청 완료" : row.status !== "complete" ? "-" : row.email_sending_at ? "발송 확인 필요" : (
+                    <div className="space-y-1">
+                      <p>{row.email_error === "email_not_configured" ? "설정 필요" : row.email_error === "email_auth_failed" ? "Gmail 인증 필요" : row.email_error ? "발송 실패" : "미발송"}</p>
+                      <form action={retryEmail}>
+                        <input type="hidden" name="token" value={row.access_token} />
+                        <button type="submit" className="text-[#463fa6] hover:underline">발송 재시도</button>
+                      </form>
+                    </div>
+                  )}
+                </td>
                 <td className="px-4 py-3">{row.report?.score ?? "-"}</td>
                 <td className="px-4 py-3">{row.report?.renewalTier ?? "-"}</td>
                 <td className="px-4 py-3">

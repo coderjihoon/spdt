@@ -11,7 +11,7 @@ export const applySiteConfig = {
 };
 
 export const applyNavLinks = [
-  { label: "실적", href: "/#proof" },
+  { label: "후기", href: "/#testimonials" },
   { label: "작업물", href: "/works" },
   { label: "진단 대상", href: "/#problems" },
   { label: "진단 항목", href: "/#diagnosis" },
@@ -164,14 +164,14 @@ export const applyFaqItems = [
   },
 ];
 
-// PLACEHOLDER — 실제 진단 건수·후기·팀 정보로 교체 전까지 배포 금지.
+// PLACEHOLDER — 아래 실적 수치는 근거 확인 전까지 배포 금지.
 export const applyProofStats = [
   { value: "290+", label: "누적 고객사" },
   { value: "98%", label: "평균 고객만족도" },
   { value: "7,010만원", label: "단일 작업 최고 매출액" },
 ];
 
-// PLACEHOLDER — 실제 후기로 교체 전까지 배포 금지.
+// 실제 고객 후기 7개.
 export const applyTestimonials = [
   { quote: "첫 화면 문구만 바꿨는데 이탈률이 눈에 보이게 줄었어요.", author: "김OO", role: "뷰티 브랜드 대표", avatar: "/faces/notion-face-1.png" },
   { quote: "펀딩 준비 중에 받은 진단으로 상세페이지 순서를 다시 짰습니다.", author: "이OO", role: "와디즈 펀딩 준비", avatar: "/faces/notion-face-2.png" },

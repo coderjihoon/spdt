@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>상페닥터 상세 확인</title>
+    <style>
+      body { width: 360px; margin: 0; padding: 18px; box-sizing: border-box; font: 14px/1.5 system-ui, sans-serif; color: #192219; }
+      h1 { margin: 0 0 8px; font-size: 18px; }
+      p { margin: 0 0 12px; }
+      button { width: 100%; padding: 10px; border: 0; border-radius: 8px; background: #08743a; color: white; font: inherit; cursor: pointer; }
+      button:disabled { opacity: .55; cursor: default; }
+      #status { margin-top: 12px; white-space: pre-wrap; }
+      #results { margin-top: 12px; max-height: 340px; overflow-y: auto; }
+      .item { display: flex; align-items: center; gap: 10px; border-top: 1px solid #e5eae5; padding: 8px 0; }
+      .item img { width: 66px; height: 66px; object-fit: contain; background: #f7f7f7; }
+      .item span { overflow-wrap: anywhere; font-size: 12px; }
+      .item--text span { white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <h1>스마트스토어 상세 확인</h1>
+    <p>신청된 상품은 Chrome이 켜져 있고 네이버 로그인이 유지되는 동안 자동으로 수집됩니다. 아래 버튼은 현재 페이지 점검용입니다. 로그인 정보는 전송하지 않습니다.</p>
+    <button id="inspect" type="button">현재 페이지 점검</button>
+    <div id="status" role="status"></div>
+    <div id="results"></div>
+    <script src="detail.js"></script><script src="popup.js"></script>
+  </body>
+</html>

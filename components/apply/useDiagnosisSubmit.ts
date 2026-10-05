@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-type StartResponse = { accessToken: string; uploads: string[]; error?: string };
+type StartResponse = { accessToken: string; uploads: string[]; queued?: boolean; error?: string };
 type SubmitInput = { name?: string; email: string; productUrl: string; files: File[] };
 
 export function useDiagnosisSubmit() {
@@ -30,6 +30,22 @@ export function useDiagnosisSubmit() {
           const upload = await fetch(payload.uploads[index], { method: "PUT", headers: { "Content-Type": file.type }, body: file });
           if (!upload.ok) throw new Error("이미지 업로드에 실패했습니다.");
         }));
+      }
+      if (payload.queued) {
+        window.clearInterval(progressTimer);
+        setProgressPercent(50);
+        setProgress("운영자 Chrome에서 상세정보를 자동 수집하고 있어요. 브라우저를 닫아도 이메일로 결과를 보내드립니다.");
+        for (let attempt = 0; attempt < 180; attempt++) {
+          const response = await fetch(`/api/diagnoses/${payload.accessToken}/status`, { cache: "no-store" });
+          const state = await response.json() as { status: string; message?: string; reportUrl?: string };
+          if (state.reportUrl) { window.location.assign(state.reportUrl); return; }
+          if (state.status === "failed") throw new Error(state.message || "진단을 완료하지 못했습니다.");
+          if (state.status === "collecting" && state.message) setProgress(state.message);
+          if (state.status === "processing") { setProgress("상세정보 수집을 마쳤어요. 보고서를 생성하고 있습니다."); setProgressPercent(80); }
+          await new Promise((resolve) => window.setTimeout(resolve, 10_000));
+        }
+        setProgress("처리가 길어지고 있습니다. 완료되면 입력하신 이메일로 결과를 보내드립니다.");
+        return;
       }
       setProgress("상세페이지를 분석하고 있어요. 최대 2분 정도 걸릴 수 있습니다.");
       const run = await fetch(`/api/diagnoses/${payload.accessToken}/run`, { method: "POST" });

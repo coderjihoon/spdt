@@ -5,3 +5,5 @@
 3. In Supabase Cron, schedule the function once daily with the `x-cleanup-secret` header. Despite its legacy name, it now only removes old daily-limit email entries.
 
 The `diagnosis-inputs` bucket is private. Do not add public read policies; the application issues short-lived upload URLs from its server role.
+
+For diagnosis result emails, also apply `migrations/20261003000000_diagnosis_email.sql` and `migrations/20261003000001_gmail_email_lock.sql`, then follow [the Gmail setup guide](../docs/DIAGNOSIS_EMAIL.md).

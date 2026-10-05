@@ -25,8 +25,8 @@ function parseArgs(argv: string[]) {
 }
 
 function render(report: Report) {
-  const dot = { red: "🔴", yellow: "🟡", green: "🟢" }[report.signal];
-  console.log(`상페닥터 진단 리포트 ${dot}  종합 ${report.score}점\n`);
+  const dot = { red: "🔴", yellow: "🟡", green: "🟢", unknown: "⚪" }[report.signal];
+  console.log(`상페닥터 진단 리포트 ${dot}  종합 ${report.score === null ? "평가 보류" : `${report.score}점`}\n`);
   console.log(report.summary);
   report.problems.forEach((problem, index) => console.log(`\n${index + 1}. ${problem.problem}\n   왜: ${problem.why}\n   개선: ${problem.direction}`));
   console.log(`\n👉 다음 행동: ${report.nextAction}`);
@@ -45,7 +45,7 @@ async function main() {
   if (!images.length || !url || !email.includes("@")) throw new Error(usage);
   const ledger = loadLedger();
   if (diagnosedToday(ledger, url, today())) throw new Error("이 URL은 오늘 이미 진단했습니다.");
-  const report = await diagnoseImageBuffers(images.map((path) => readFileSync(path)));
+  const report = await diagnoseImageBuffers(images.map((path) => readFileSync(path)), url);
   render(report);
   ledger.push({ date: today(), url, email });
   writeFileSync(LEDGER, JSON.stringify(ledger, null, 2));

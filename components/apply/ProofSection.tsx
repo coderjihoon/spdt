@@ -45,6 +45,13 @@ export function ProofSection() {
         </div>
       </section>
 
+
+    </>
+  );
+}
+
+export function ProofStatsSection() {
+  return (
       <section id="proof" className="px-4 py-14 sm:px-6 lg:px-10 lg:py-24">
         <div className="mx-auto max-w-[1280px]">
           <div className="grid gap-6 sm:grid-cols-3">
@@ -57,6 +64,5 @@ export function ProofSection() {
           </div>
         </div>
       </section>
-    </>
   );
 }

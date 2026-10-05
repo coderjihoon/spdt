@@ -14,7 +14,7 @@ export function Header({ mobileCta = true }: { mobileCta?: boolean }) {
       <header className="sticky top-0 z-40 border-b border-slate-100 bg-white/90 px-4 backdrop-blur-xl sm:px-6 lg:px-10">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between py-4">
           <a href="/" className="flex items-center gap-3">
-            <Image src="/logo.png" alt="SPDT" width={662} height={298} className="h-7 w-auto" priority />
+            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-12 w-auto" priority />
           </a>
 
           <nav className="hidden items-center gap-7 text-[12px] text-slate-600 lg:flex">

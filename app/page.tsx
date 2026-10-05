@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { DiagnosisSection } from "@/components/apply/DiagnosisSection";
+import { CaseStudiesSection } from "@/components/apply/CaseStudiesSection";
+import { CustomerReviewsSection } from "@/components/apply/CustomerReviewsSection";
+import { EmpathyDiagnosisSection } from "@/components/apply/EmpathyDiagnosisSection";
 import { ExampleSection } from "@/components/apply/ExampleSection";
 import { FAQSection } from "@/components/apply/FAQSection";
 import { Footer } from "@/components/apply/Footer";
@@ -29,10 +32,13 @@ export default function Home() {
     <main className="overflow-x-clip bg-white pb-20 md:pb-0">
       <Header />
       <Hero />
+      <ProblemSection />
+      <EmpathyDiagnosisSection />
+      <CaseStudiesSection />
+      <CustomerReviewsSection />
       <ProofSection />
       <ReportPreviewSection />
       <PortfolioSection />
-      <ProblemSection />
       <DiagnosisSection />
       <ExampleSection />
       <ProcessSection />

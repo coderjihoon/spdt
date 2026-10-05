@@ -27,7 +27,7 @@ export function Hero() {
         <div className="flex flex-col items-center">
           <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">FREE DETAIL PAGE DIAGNOSIS</p>
           <h1 className="mt-5 max-w-[680px] text-[40px] font-medium leading-[1.02] tracking-[-0.055em] text-slate-950 [text-wrap:balance] sm:text-[56px] lg:text-[68px]">
-            잘 안팔리는 제품의<br />상세페이지를 분석해<br />매출을 올립니다.
+            잘 안팔리는 제품의<br />상세페이지를 분석해<br /><span className="text-[#004EE0]">매출을 올립니다.</span>
           </h1>
           <p className="mt-6 max-w-[560px] text-[17px] leading-[1.65] text-slate-600 lg:text-[19px]">
             판매 페이지 주소나 상세페이지 파일을 보내주세요. 고객이 어디서 구매를 망설이는지 확인하고, 먼저 고쳐야 할 3가지 요소를 알려드립니다.

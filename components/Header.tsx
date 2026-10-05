@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { navLinks, siteConfig } from "@/data/site";
 
 export function Header() {
@@ -13,15 +14,7 @@ export function Header() {
       <header className="border-b border-slate-100 px-4 sm:px-6 lg:px-10">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between py-5">
           <a href="#" className="flex items-center gap-3">
-            <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold tracking-[0.18em] text-white">
-              SP
-            </span>
-            <div className="min-w-0">
-              <p className="text-sm font-semibold tracking-[0.18em] text-slate-900">
-                {siteConfig.name}
-              </p>
-              <p className="text-xs text-slate-500">{siteConfig.label}</p>
-            </div>
+            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-12 w-auto" priority />
           </a>
 
           <nav className="hidden items-center gap-8 text-[12px] text-slate-600 lg:flex">

@@ -101,6 +101,16 @@ details > summary::-webkit-details-marker {
   .portfolio-marquee:hover .animate-portfolio-marquee {
     animation-play-state: paused;
   }
+
+  .customer-review-marquee:has(:focus-visible) .customer-review-track {
+    animation-play-state: paused;
+  }
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .customer-review-marquee:hover .customer-review-track {
+    animation-play-state: paused;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

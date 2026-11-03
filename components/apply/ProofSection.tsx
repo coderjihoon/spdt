@@ -1,68 +1,35 @@
 import Image from "next/image";
-import { applyProofStats, applyTestimonials } from "@/data/apply";
-
-export function ProofSection() {
-  const rows = [
-    applyTestimonials,
-    [...applyTestimonials.slice(3), ...applyTestimonials.slice(0, 3)],
-  ];
-
-  return (
-    <>
-      <section id="testimonials" className="bg-[#f7f7fb] px-4 py-14 sm:px-6 lg:px-10 lg:py-24">
-        <div className="mx-auto max-w-[1280px]">
-          <div className="flex items-end justify-between gap-6">
-            <div>
-              <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">REVIEWS</p>
-              <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[44px] lg:text-[52px]">진단을 받아본<br />분들의 이야기</h2>
-            </div>
-          </div>
-
-          <div className="-mx-4 mt-10 flex flex-col gap-5 overflow-hidden px-4 sm:-mx-6 sm:px-6 lg:-mx-10 lg:px-10">
-            {rows.map((row, rowIndex) => (
-              <div key={rowIndex} aria-hidden={rowIndex === 1} className="animate-testimonial-marquee flex w-max gap-5" style={{ animationDirection: rowIndex === 1 ? "reverse" : "normal" }}>
-                {[...row, ...row].map((item, index) => (
-                  <article key={`${item.author}-${index}`} aria-hidden={index >= row.length} className="flex min-h-[430px] w-[min(82vw,420px)] shrink-0 flex-col rounded-[28px] bg-[#f1f3f9] p-7 sm:p-9">
-                    <div className="flex items-center justify-between gap-4">
-                      <span className="flex h-14 w-14 items-center justify-center rounded-full bg-white p-1">
-                        <Image src={item.avatar} alt="" width={48} height={48} className="h-12 w-12 rounded-full object-cover" />
-                      </span>
-                      <span className="rounded-full border border-slate-300 px-4 py-2 text-[11px] font-medium text-slate-500">{item.role}</span>
-                    </div>
-                    <span className="mt-16 text-[52px] font-semibold leading-none text-[#99CAFF]">“</span>
-                    <p className="mt-5 text-[30px] font-medium leading-[1.2] tracking-[-0.045em] text-slate-950 sm:text-[34px]">{item.quote}</p>
-                    <div className="mt-auto pt-12">
-                      <div className="border-l border-slate-300 pl-4">
-                        <p className="text-[16px] font-medium tracking-[-0.03em] text-slate-900">{item.author}</p>
-                        <p className="mt-1 text-[13px] text-slate-500">{item.role}</p>
-                      </div>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-
-    </>
-  );
-}
+import { applyProofStats } from "@/data/apply";
 
 export function ProofStatsSection() {
   return (
-      <section id="proof" className="px-4 py-14 sm:px-6 lg:px-10 lg:py-24">
-        <div className="mx-auto max-w-[1280px]">
-          <div className="grid gap-6 sm:grid-cols-3">
-            {applyProofStats.map((stat) => (
-              <div key={stat.label} className="rounded-[20px] bg-white p-6 text-center ring-1 ring-inset ring-[#ececf4] sm:p-7">
-                <p className="text-[48px] font-semibold leading-none tracking-[-0.05em] text-[#004EE0] sm:text-[56px]">{stat.value}</p>
-                <p className="mt-2 text-[13px] text-slate-500">{stat.label}</p>
-              </div>
-            ))}
-          </div>
+    <section id="proof" aria-label="숫자로 보는 상페닥터" className="relative isolate overflow-hidden rounded-t-[32px] bg-[#111318] text-white sm:rounded-t-[48px] lg:rounded-t-[56px]">
+      <div className="absolute inset-x-0 top-0 h-[280px] [mask-image:linear-gradient(to_bottom,black_70%,transparent)] sm:h-[360px] lg:left-[35%] lg:h-full lg:[mask-image:linear-gradient(to_right,transparent,black_25%)]">
+        <Image
+          src="/proof-stats-meeting.webp"
+          alt=""
+          fill
+          sizes="100vw"
+          className="object-cover object-right-top lg:object-contain"
+        />
+      </div>
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-b from-black/20 via-[#111318]/80 to-[#111318] lg:via-black/35" />
+      <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-[#111318]/65 via-transparent to-transparent" />
+      <div className="relative mx-auto flex min-h-[700px] max-w-[1500px] flex-col justify-between gap-36 px-6 py-14 sm:min-h-[760px] sm:px-10 sm:py-16 lg:min-h-[600px] lg:gap-16 lg:px-16 lg:pt-20">
+        <p className="flex items-center gap-4 text-[12px] font-medium tracking-[0.12em] text-white/85 sm:text-[14px]">
+          <span aria-hidden="true" className="h-2.5 w-2.5 rounded-full bg-[#3578ff]" />
+          숫자로 보는 상페닥터
+        </p>
+        <div className="grid gap-8 sm:gap-10 lg:grid-cols-3 lg:gap-6">
+          {applyProofStats.map((stat, index) => (
+            <div key={stat.label} className="border-l border-white/40 pl-5 sm:pl-8 lg:pl-10">
+              <p className={`font-semibold leading-none tracking-[-0.04em] tabular-nums text-white ${index === 2 ? "text-[clamp(3.25rem,5.2vw,5.4rem)]" : "text-[clamp(3.25rem,6vw,6rem)]"}`}>{stat.value}</p>
+              <p className="mt-5 text-[15px] leading-6 text-white/70 sm:text-[17px]">{stat.label}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </div>
+      <div aria-hidden="true" className="absolute inset-x-0 bottom-0 h-8 rounded-t-[32px] bg-white sm:h-12 sm:rounded-t-[48px]" />
+    </section>
   );
 }

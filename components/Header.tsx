@@ -14,7 +14,7 @@ export function Header() {
       <header className="border-b border-slate-100 px-4 sm:px-6 lg:px-10">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between py-5">
           <a href="#" className="flex items-center gap-3">
-            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-12 w-auto" priority />
+            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-8 w-auto sm:h-9" priority />
           </a>
 
           <nav className="hidden items-center gap-8 text-[12px] text-slate-600 lg:flex">

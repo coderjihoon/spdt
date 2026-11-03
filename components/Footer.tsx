@@ -7,7 +7,7 @@ export function Footer() {
       <div className="mx-auto flex max-w-[1280px] flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-xl">
           <div className="flex items-center gap-3">
-            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-16 w-auto" />
+            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-10 w-auto sm:h-11" />
           </div>
 
           <p className="mt-5 text-base leading-7 text-slate-600">{siteConfig.description}</p>

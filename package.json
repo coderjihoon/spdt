@@ -12,8 +12,10 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.126.0",
     "@supabase/supabase-js": "^2.116.0",
+    "browser-use-sdk": "^3.11.3",
     "next": "latest",
     "nodemailer": "^10.0.14",
+    "playwright-core": "^1.63.0",
     "react": "latest",
     "react-dom": "latest",
     "sharp": "^0.35.4"

@@ -26,7 +26,7 @@ export default function StoryTwoPage() {
     <main lang="en" className="overflow-x-clip bg-[#F6F7F4] text-[#15232A]">
       <header className="border-b border-[#CCD4D5] px-5 sm:px-8">
         <div className="mx-auto flex h-20 max-w-[1360px] items-center justify-between gap-5">
-          <a href="/" className="text-xl font-bold tracking-[-0.04em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004EE0]"><Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-12 w-auto" priority /></a>
+          <a href="/" className="text-xl font-bold tracking-[-0.04em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004EE0]"><Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-8 w-auto sm:h-9" priority /></a>
           <nav aria-label="Page sections" className="hidden gap-8 text-sm font-medium md:flex"><a href="#friction" className="hover:text-[#004EE0]">The problem</a><a href="#method" className="hover:text-[#004EE0]">Our approach</a><a href="#steps" className="hover:text-[#004EE0]">How it works</a></nav>
           <a href={cta} className="inline-flex min-h-11 items-center border-b-2 border-[#004EE0] text-sm font-semibold text-[#004EE0] hover:text-[#003CB3] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004EE0]">Get a free review <span aria-hidden="true" className="ml-3">↗</span></a>
         </div>
@@ -63,7 +63,7 @@ export default function StoryTwoPage() {
 
       <section className="bg-[#004EE0] px-5 py-24 text-white sm:px-8 sm:py-32"><div className="mx-auto max-w-[1360px]"><h2 className="max-w-6xl text-[clamp(3rem,7vw,7.5rem)] font-semibold leading-[1.06] tracking-[-0.04em]">Find the first thing<br />to fix.</h2><div className="mt-12 flex flex-col gap-8 border-t border-white/40 pt-8 md:flex-row md:items-end md:justify-between"><p className="max-w-xl text-lg leading-8 text-[#D6E4FF]">Send a URL or screenshots. We will outline three issues that may be getting in the way of a purchase.</p><a href={cta} className="inline-flex min-h-14 items-center self-start rounded-md bg-white px-7 text-base font-semibold text-[#003CA9] hover:bg-[#EAF1FF] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">Get a free page review <span aria-hidden="true" className="ml-6 text-xl">↗</span></a></div></div></section>
 
-      <footer className="bg-[#15232A] px-5 py-9 text-white sm:px-8"><div className="mx-auto flex max-w-[1360px] flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between"><Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-16 w-auto" /><span className="text-[#B3C1C7]">Product pages built around the buying decision.</span><a href="/" className="underline underline-offset-4 hover:text-[#AFC6FF]">Back to the main site</a></div></footer>
+      <footer className="bg-[#15232A] px-5 py-9 text-white sm:px-8"><div className="mx-auto flex max-w-[1360px] flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between"><Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-10 w-auto sm:h-11" /><span className="text-[#B3C1C7]">Product pages built around the buying decision.</span><a href="/" className="underline underline-offset-4 hover:text-[#AFC6FF]">Back to the main site</a></div></footer>
     </main>
   );
 }

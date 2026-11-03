@@ -25,7 +25,7 @@ export default function StoryOnePage() {
     <main className="overflow-x-clip bg-[#F4F3EF] text-[#17212B]">
       <header className="bg-[#17212B] px-5 text-white sm:px-8">
         <div className="mx-auto flex h-[76px] max-w-[1320px] items-center justify-between border-b border-white/25">
-          <a href="/" className="text-xl font-bold tracking-[-0.03em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"><Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-12 w-auto" priority /></a>
+          <a href="/" className="text-xl font-bold tracking-[-0.03em] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"><Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-8 w-auto sm:h-9" priority /></a>
           <span className="hidden text-sm text-[#B8C2CF] sm:block">상세페이지 구조 · 카피 진단</span>
           <a href={cta} className="text-sm font-semibold underline decoration-[#9BB7FF] underline-offset-8 hover:text-[#B8CDFF] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white">무료 진단 신청 ↗</a>
         </div>
@@ -79,7 +79,7 @@ export default function StoryOnePage() {
 
       <section className="bg-[#004EE0] px-5 py-24 text-white sm:px-8 sm:py-32"><div className="mx-auto max-w-[1320px]"><h2 className="max-w-6xl text-[clamp(2.8rem,7vw,7.5rem)] font-semibold leading-[1.08] tracking-[-0.04em] [text-wrap:balance]">지금, 고객이 멈추는<br />곳부터 찾아보세요.</h2><div className="mt-12 flex flex-col gap-8 border-t border-white/40 pt-8 md:flex-row md:items-end md:justify-between"><p className="max-w-xl text-lg leading-8 text-[#D5E3FF]">제품 URL이나 이미지를 보내면 구매를 막는 요소 3가지와 개선 방향을 정리해드립니다.</p><a href={cta} className="inline-flex min-h-14 items-center justify-center self-start rounded-md bg-white px-7 text-base font-semibold text-[#003DAA] transition-colors hover:bg-[#E9F0FF] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white">무료 진단 신청하기 <span aria-hidden="true" className="ml-6 text-xl">↗</span></a></div></div></section>
 
-      <footer className="bg-[#17212B] px-5 py-9 text-white sm:px-8"><div className="mx-auto flex max-w-[1320px] flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between"><Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-16 w-auto" /><span className="text-[#ABB7C5]">제품의 장점을 고객의 구매 이유로.</span><a href="/" className="underline underline-offset-4 hover:text-[#B8CDFF]">메인 페이지로 이동</a></div></footer>
+      <footer className="bg-[#17212B] px-5 py-9 text-white sm:px-8"><div className="mx-auto flex max-w-[1320px] flex-col gap-4 text-sm sm:flex-row sm:items-center sm:justify-between"><Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-10 w-auto sm:h-11" /><span className="text-[#ABB7C5]">제품의 장점을 고객의 구매 이유로.</span><a href="/" className="underline underline-offset-4 hover:text-[#B8CDFF]">메인 페이지로 이동</a></div></footer>
     </main>
   );
 }

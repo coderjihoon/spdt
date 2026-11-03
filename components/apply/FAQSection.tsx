@@ -1,4 +1,4 @@
-import { applyFaqItems, applySiteConfig } from "@/data/apply";
+import { applyFaqItems } from "@/data/apply";
 
 export function FAQSection() {
   return (
@@ -8,7 +8,6 @@ export function FAQSection() {
           <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">FAQ</p>
           <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[44px] lg:text-[52px]">신청 전에<br />확인해보세요.</h2>
           <p className="mt-5 max-w-[480px] text-[16px] leading-7 text-slate-600">무료 진단만 받아도 됩니다. 제작이 필요할 때에만 제작·리뉴얼 방향을 제안드립니다.</p>
-          <a href={applySiteConfig.emailHref} className="mt-6 inline-flex text-[14px] font-medium text-slate-900 underline decoration-[#004EE0] decoration-2 underline-offset-4">{applySiteConfig.email}</a>
         </div>
 
         <div className="divide-y divide-slate-100 border-y border-slate-100">

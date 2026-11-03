@@ -11,16 +11,10 @@ export const applySiteConfig = {
 };
 
 export const applyNavLinks = [
-  { label: "후기", href: "/#testimonials" },
   { label: "작업물", href: "/works" },
-  { label: "진단 대상", href: "/#problems" },
-  { label: "진단 항목", href: "/#diagnosis" },
-  { label: "전달 예시", href: "/#examples" },
-  { label: "신청", href: "/#diagnosis-form" },
-  { label: "FAQ", href: "/#faq" },
 ];
 
-// AI 엔진이 학습한 데이터 건수. ProofSection 통계와 DiagnosisSection 소개 문구에서 공유해 숫자를 한 곳에서만 관리한다.
+// AI 엔진이 학습한 데이터 건수. 통계와 DiagnosisSection 소개 문구에서 공유해 숫자를 한 곳에서만 관리한다.
 export const applyAiEngineDataCount = "700+";
 
 export const applyHeroStats = [
@@ -35,7 +29,7 @@ export const applyProblemItems = [
   "무엇을 먼저 고쳐야 할지 모르겠어요.",
   "제품 장점은 많은데 고객에게 잘 전달되지 않아요.",
   "와디즈·텀블벅 펀딩을 준비 중이에요.",
-  "기존 상세페이지가 촌스럽거나 정리가 안 되어 있어요.",
+  "기존 상세페이지가 정리가 안 되어 있어요.",
 ];
 
 export const applyDiagnosisItems = [
@@ -66,25 +60,6 @@ export const applyDiagnosisItems = [
   },
 ];
 
-export const applyExampleCards = [
-  {
-    eyebrow: "첫 화면 진단",
-    problem: "제품명과 큰 이미지가 첫 화면을 차지해 구매 이유가 바로 보이지 않습니다.",
-    reason:
-      "광고나 검색으로 들어온 고객은 제품을 자세히 읽기 전에, 나에게 왜 필요한지부터 확인합니다.",
-    direction:
-      "상단 문장은 고객 상황 중심으로 바꿉니다. 핵심 효과와 신뢰 근거도 첫 화면 안에 배치합니다.",
-  },
-  {
-    eyebrow: "정보 순서 진단",
-    problem: "기능, 인증, 후기, 가격 정보가 같은 비중으로 늘어서 있습니다.",
-    reason:
-      "정보가 많아도 우선순위가 없으면 고객은 무엇을 근거로 판단할지 알기 어렵습니다.",
-    direction:
-      "섹션은 고민 제기, 해결 원리, 차별점, 사용 증거, CTA 순서로 다시 배치합니다.",
-  },
-];
-
 export const applyProcessSteps = [
   {
     step: "1",
@@ -109,24 +84,6 @@ export const applyProcessSteps = [
     title: "필요한 경우 제작/리뉴얼 방향 제안",
     description:
       "진단만으로 충분하면 여기서 끝냅니다. 제작이 필요할 때만 예상 범위와 일정을 안내드리며, 신청을 강요하지 않습니다.",
-  },
-];
-
-export const applyTrustPoints = [
-  {
-    title: "디자인보다 먼저, 순서부터 봅니다.",
-    description:
-      "무엇을 먼저 보여주고 어떤 근거를 뒤에 둘지부터 잡습니다.",
-  },
-  {
-    title: "고객이 멈추는 이유를 찾습니다.",
-    description:
-      "사기 전까지 남는 의심과 질문을 페이지 안에서 풀 수 있는지 봅니다.",
-  },
-  {
-    title: "진단만 받고 끝내도 됩니다.",
-    description:
-      "제작이나 리뉴얼이 필요할 때만 범위와 우선순위를 말씀드립니다.",
   },
 ];
 
@@ -171,21 +128,10 @@ export const applyProofStats = [
   { value: "7,010만원", label: "단일 작업 최고 매출액" },
 ];
 
-// 실제 고객 후기 7개.
-export const applyTestimonials = [
-  { quote: "첫 화면 문구만 바꿨는데 이탈률이 눈에 보이게 줄었어요.", author: "김OO", role: "뷰티 브랜드 대표", avatar: "/faces/notion-face-1.png" },
-  { quote: "펀딩 준비 중에 받은 진단으로 상세페이지 순서를 다시 짰습니다.", author: "이OO", role: "와디즈 펀딩 준비", avatar: "/faces/notion-face-2.png" },
-  { quote: "무엇부터 고쳐야 할지 몰랐는데, 순서가 보이니 바로 손댈 수 있었어요.", author: "정OO", role: "생활용품 브랜드 운영", avatar: "/faces/notion-face-3.png" },
-  { quote: "긴 설명을 줄이고 나니 제품 장점이 훨씬 또렷하게 보였습니다.", author: "최OO", role: "식품 브랜드 대표", avatar: "/faces/notion-face-4.png" },
-  { quote: "후기와 인증을 어디에 둬야 할지 알게 된 것만으로도 큰 도움이 됐어요.", author: "박OO", role: "건강식품 브랜드 운영", avatar: "/faces/notion-face-5.png" },
-  { quote: "광고비를 더 쓰기 전에 페이지부터 봐야 한다는 걸 알았습니다.", author: "윤OO", role: "패션 브랜드 대표", avatar: "/faces/notion-face-1.png" },
-  { quote: "우리 제품을 처음 보는 사람 입장에서 다시 보게 됐어요.", author: "한OO", role: "반려동물 브랜드 운영", avatar: "/faces/notion-face-2.png" },
-];
-
 export const applyFooterLinks = [
   { label: "작업물", href: "/works" },
   { label: "진단 항목", href: "/#diagnosis" },
-  { label: "전달 예시", href: "/#examples" },
+  { label: "전달 예시", href: "/#report-preview" },
   { label: "무료 신청", href: "/#diagnosis-form" },
   { label: "FAQ", href: "/#faq" },
 ];

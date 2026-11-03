@@ -8,7 +8,6 @@ import { PortfolioSection } from "@/components/PortfolioSection";
 import { ProblemSection } from "@/components/ProblemSection";
 import { ProcessSection } from "@/components/ProcessSection";
 import { SolutionSection } from "@/components/SolutionSection";
-import { TestimonialSection } from "@/components/TestimonialSection";
 import { TrustSection } from "@/components/TrustSection";
 
 export default function About() {
@@ -22,7 +21,6 @@ export default function About() {
       <PortfolioSection />
       <ProcessSection />
       <PackageSection />
-      <TestimonialSection />
       <FAQSection />
       <CTASection />
       <Footer />

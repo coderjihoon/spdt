@@ -119,7 +119,7 @@ export default async function ReportPage({ params }: { params: Promise<{ slug: s
       <header className="sticky top-0 z-40 border-b border-slate-100 bg-white px-5 sm:px-6 lg:px-10">
         <div className="mx-auto flex max-w-[1280px] items-center justify-between py-4">
           <a href="/" aria-label="상페닥터 홈" className="inline-flex items-center">
-            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-12 w-auto" priority />
+            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-8 w-auto sm:h-9" priority />
           </a>
           <ConsultButton {...consult} header />
         </div>

@@ -1,0 +1,224 @@
+[
+  {
+    "id": "A",
+    "folder": "01-fluent-soft",
+    "title": "부드러운 컬러 클레이",
+    "provider": "Microsoft Fluent Emoji",
+    "description": "둥근 형태와 부드러운 그림자. 친근하고 밝은 느낌.",
+    "source": "https://github.com/microsoft/fluentui-emoji",
+    "license": "MIT · 배포 시 저작권 및 라이선스 고지 유지",
+    "license_url": "https://github.com/microsoft/fluentui-emoji/blob/main/LICENSE",
+    "items": [
+      {
+        "name": "Magnifying glass tilted right",
+        "url": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Magnifying%20glass%20tilted%20right/3D/magnifying_glass_tilted_right_3d.png",
+        "id": "A1",
+        "file": "01-fluent-soft/A1.png"
+      },
+      {
+        "name": "Clipboard",
+        "url": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Clipboard/3D/clipboard_3d.png",
+        "id": "A2",
+        "file": "01-fluent-soft/A2.png"
+      },
+      {
+        "name": "Bar chart",
+        "url": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Bar%20chart/3D/bar_chart_3d.png",
+        "id": "A3",
+        "file": "01-fluent-soft/A3.png"
+      },
+      {
+        "name": "Light bulb",
+        "url": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Light%20bulb/3D/light_bulb_3d.png",
+        "id": "A4",
+        "file": "01-fluent-soft/A4.png"
+      },
+      {
+        "name": "Memo",
+        "url": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Memo/3D/memo_3d.png",
+        "id": "A5",
+        "file": "01-fluent-soft/A5.png"
+      },
+      {
+        "name": "Chart increasing",
+        "url": "https://raw.githubusercontent.com/microsoft/fluentui-emoji/main/assets/Chart%20increasing/3D/chart_increasing_3d.png",
+        "id": "A6",
+        "file": "01-fluent-soft/A6.png"
+      }
+    ]
+  },
+  {
+    "id": "B",
+    "folder": "02-icons8-fluency",
+    "title": "선명한 플라스틱",
+    "provider": "Icons8 3D Fluency",
+    "description": "간결한 형태와 선명한 컬러. 무료 PNG 미리보기는 100px.",
+    "source": "https://icons8.com/icons/styles/3d-fluency",
+    "license": "무료 100px PNG · 실제 사용 시 Icons8 출처 링크 필요. 큰 원본은 별도 라이선스 확인",
+    "license_url": "https://intercom.help/icons8-7fb7577e8170/en/articles/4725518-can-i-download-icons-for-free",
+    "items": [
+      {
+        "name": "돋보기",
+        "url": "https://img.icons8.com/3d-fluency/100/search.png",
+        "id": "B1",
+        "file": "02-icons8-fluency/B1.png"
+      },
+      {
+        "name": "체크 표시",
+        "url": "https://img.icons8.com/3d-fluency/100/checkmark.png",
+        "id": "B2",
+        "file": "02-icons8-fluency/B2.png"
+      },
+      {
+        "name": "막대 차트",
+        "url": "https://img.icons8.com/3d-fluency/100/bar-chart.png",
+        "id": "B3",
+        "file": "02-icons8-fluency/B3.png"
+      },
+      {
+        "name": "전구",
+        "url": "https://img.icons8.com/3d-fluency/100/idea.png",
+        "id": "B4",
+        "file": "02-icons8-fluency/B4.png"
+      }
+    ]
+  },
+  {
+    "id": "C",
+    "folder": "03-glassy-preview",
+    "title": "투명한 유리",
+    "provider": "Icons8 3D Glassy",
+    "description": "광택과 투명감이 있는 유리 재질. 공개 미리보기로 스타일 비교.",
+    "source": "https://icons8.com/illustrations/styles/3d-glassy",
+    "license": "공개 미리보기 · 선택 검토용. 실제 적용은 유료 구독 라이선스 필요",
+    "license_url": "https://icons8.com/illustrations/styles/3d-glassy",
+    "items": [
+      {
+        "name": "유리 키",
+        "url": "https://ouch-prod-var-cdn.icons8.com/qj/illustrations/previews/M7eJ1VKuKYBOvKu4.webp",
+        "id": "C1",
+        "file": "03-glassy-preview/C1.webp"
+      },
+      {
+        "name": "유리 차트",
+        "url": "https://ouch-prod-var-cdn.icons8.com/cc/illustrations/previews/fIhbrWfkWia0_YhU.webp",
+        "id": "C2",
+        "file": "03-glassy-preview/C2.webp"
+      },
+      {
+        "name": "유리 오브젝트",
+        "url": "https://ouch-prod-var-cdn.icons8.com/uf/illustrations/previews/gEXeAbuOijUBWlbS.webp",
+        "id": "C3",
+        "file": "03-glassy-preview/C3.webp"
+      }
+    ]
+  },
+  {
+    "id": "D",
+    "folder": "04-clay-business-preview",
+    "title": "파스텔 비즈니스 클레이",
+    "provider": "River Visual / Pixelbuddha",
+    "description": "낮은 광택과 파스텔 색감. 개별 원본 대신 공개 팩 미리보기 4장.",
+    "source": "https://pixelbuddha.net/icons/11799-3d-business-icon-pack",
+    "license": "공개 팩 미리보기 · 선택 검토용. 실제 PNG 원본은 구매/멤버십 라이선스 필요",
+    "license_url": "https://pixelbuddha.net/icons/11799-3d-business-icon-pack",
+    "items": [
+      {
+        "name": "팩 미리보기 1",
+        "url": "https://products.pixelbuddha.net/img-proxy/654oYDc4UmdtfeKLxnjLwslrEvGy6JREpYIzTG5RLT8/rs:fill:1200:630/el:1/f:jpg/czM6Ly9wYi1wcm9kdWN0cy1tZWRpYS8xNDcxNTIvM2QtYnVzaW5lc3MtaWNvbi1wYWNrLTAud2VicA",
+        "id": "D1",
+        "file": "04-clay-business-preview/D1.jpg"
+      },
+      {
+        "name": "팩 미리보기 2",
+        "url": "https://products.pixelbuddha.net/img-proxy/Aa-Yqa9SMQc9CA8FXuIn1xiC8bwmuYkRmKhyCP-67ZE/rs:fit:1200:0/f:webp/czM6Ly9wYi1wcm9kdWN0cy1tZWRpYS8xNDcxNTMvM2QtYnVzaW5lc3MtaWNvbi1wYWNrLTEud2VicA",
+        "id": "D2",
+        "file": "04-clay-business-preview/D2.webp"
+      },
+      {
+        "name": "팩 미리보기 3",
+        "url": "https://products.pixelbuddha.net/img-proxy/A3s8Aqzc7w2y4IviE0cupsOhWlM77CokizG7Vq85wog/rs:fit:1200:0/f:webp/czM6Ly9wYi1wcm9kdWN0cy1tZWRpYS8xNDcxNTQvM2QtYnVzaW5lc3MtaWNvbi1wYWNrLTIud2VicA",
+        "id": "D3",
+        "file": "04-clay-business-preview/D3.webp"
+      },
+      {
+        "name": "팩 미리보기 4",
+        "url": "https://products.pixelbuddha.net/img-proxy/xzepFpSHMoDNti1jZuMvkxplo6N-DmUQpd4sIel1-o4/rs:fit:1200:0/f:webp/czM6Ly9wYi1wcm9kdWN0cy1tZWRpYS8xNDcxNTUvM2QtYnVzaW5lc3MtaWNvbi1wYWNrLTMud2VicA",
+        "id": "D4",
+        "file": "04-clay-business-preview/D4.webp"
+      }
+    ]
+  },
+  {
+    "id": "E",
+    "folder": "05-gradient",
+    "title": "컬러 그라데이션",
+    "provider": "3dicons V1",
+    "description": "핑크·퍼플·오렌지가 섞인 매끈한 재질.",
+    "source": "https://3dicons.co/",
+    "license": "V1 CC0 · 개인 및 상업 프로젝트 사용 가능",
+    "license_url": "https://3dicons.co/about",
+    "items": [
+      {
+        "name": "목표",
+        "url": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/gradient/target-dynamic-gradient.png",
+        "id": "E1",
+        "file": "05-gradient/E1.png"
+      },
+      {
+        "name": "문서",
+        "url": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/gradient/file-text-dynamic-gradient.png",
+        "id": "E2",
+        "file": "05-gradient/E2.png"
+      },
+      {
+        "name": "차트",
+        "url": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/gradient/chart-dynamic-gradient.png",
+        "id": "E3",
+        "file": "05-gradient/E3.png"
+      },
+      {
+        "name": "체크",
+        "url": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/gradient/tick-dynamic-gradient.png",
+        "id": "E4",
+        "file": "05-gradient/E4.png"
+      }
+    ]
+  },
+  {
+    "id": "F",
+    "folder": "06-metallic",
+    "title": "다크 메탈 & 골드",
+    "provider": "3dicons V1",
+    "description": "짙은 금속 바디와 금색 포인트. 묵직한 느낌.",
+    "source": "https://3dicons.co/",
+    "license": "V1 CC0 · 개인 및 상업 프로젝트 사용 가능",
+    "license_url": "https://3dicons.co/about",
+    "items": [
+      {
+        "name": "목표",
+        "url": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/target-dynamic-premium.png",
+        "id": "F1",
+        "file": "06-metallic/F1.png"
+      },
+      {
+        "name": "문서",
+        "url": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/file-text-dynamic-premium.png",
+        "id": "F2",
+        "file": "06-metallic/F2.png"
+      },
+      {
+        "name": "차트",
+        "url": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/chart-dynamic-premium.png",
+        "id": "F3",
+        "file": "06-metallic/F3.png"
+      },
+      {
+        "name": "체크",
+        "url": "https://3dicons.sgp1.cdn.digitaloceanspaces.com/v1/dynamic/premium/tick-dynamic-premium.png",
+        "id": "F4",
+        "file": "06-metallic/F4.png"
+      }
+    ]
+  }
+]

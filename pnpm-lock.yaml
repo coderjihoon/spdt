@@ -10,16 +10,22 @@ importers:
     dependencies:
       '@anthropic-ai/sdk':
         specifier: ^0.126.0
-        version: 0.126.0
+        version: 0.126.0(zod@4.4.3)
       '@supabase/supabase-js':
         specifier: ^2.116.0
         version: 2.116.0
+      browser-use-sdk:
+        specifier: ^3.11.3
+        version: 3.11.3
       next:
         specifier: latest
         version: 16.2.4(react-dom@19.2.5(react@19.2.5))(react@19.2.5)
       nodemailer:
         specifier: ^10.0.14
         version: 10.0.14
+      playwright-core:
+        specifier: ^1.63.0
+        version: 1.63.0
       react:
         specifier: latest
         version: 19.2.5
@@ -770,6 +776,20 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  browser-use-sdk@3.11.3:
+    resolution: {integrity: sha512-lVOHeyB/Bh9h5kPtxqgZ+nYmY6OJWYtGgeovLs0jHUrsIfIlFZ0YXEkL99Y8X1SlYQyzcEYTDLpxvkiHBQpWvw==}
+    peerDependencies:
+      '@x402/evm': ^2.20.0
+      '@x402/fetch': ^2.20.0
+      viem: ^2.55.10
+    peerDependenciesMeta:
+      '@x402/evm':
+        optional: true
+      '@x402/fetch':
+        optional: true
+      viem:
+        optional: true
+
   caniuse-lite@1.0.30001791:
     resolution: {integrity: sha512-yk0l/YSrOnFZk3UROpDLQD9+kC1l4meK/wed583AXrzoarMGJcbRi2Q4RaUYbKxYAsZ8sWmaSa/DsLmdBeI1vQ==}
 
@@ -782,6 +802,10 @@ packages:
   detect-libc@2.1.2:
     resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
     engines: {node: '>=8'}
+
+  dotenv@17.4.2:
+    resolution: {integrity: sha512-nI4U3TottKAcAD9LLud4Cb7b2QztQMUEfHbvhTH09bqXTxnSie8WnjPALV/WMCrJZ6UV/qHJ6L03OqO3LcdYZw==}
+    engines: {node: '>=12'}
 
   enhanced-resolve@5.21.0:
     resolution: {integrity: sha512-otxSQPw4lkOZWkHpB3zaEQs6gWYEsmX4xQF68ElXC/TWvGxGMSGOvoNbaLXm6/cS/fSfHtsEdw90y20PCd+sCA==}
@@ -925,6 +949,11 @@ packages:
   picocolors@1.1.1:
     resolution: {integrity: sha512-xceH2snhtb5M9liqDsmEw56le376mTZkEX/jEb/RxNFyegNul7eNslCXP9FDj/Lcu0X8KEyMceP2ntpaHrDEVA==}
 
+  playwright-core@1.63.0:
+    resolution: {integrity: sha512-rYCsBF/M5HjUch52bbtVONEFjv6Xu8sm8h72dNlR5bzIE1fvC/bxgspzkjSfU+MweEMmPM8KJebG6nnyxo5mCg==}
+    engines: {node: '>=20'}
+    hasBin: true
+
   postcss@8.4.31:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
@@ -1017,14 +1046,19 @@ packages:
   undici-types@8.9.0:
     resolution: {integrity: sha512-KTDyRTYX8sWmKXAikPHHSyc63CRPETMctyjKFupcC6OBLXT3xsN0e9aF7m+mIXutFWpUXuedtowG7iLOzp0kQg==}
 
+  zod@4.4.3:
+    resolution: {integrity: sha512-ytENFjIJFl2UwYglde2jchW2Hwm4GJFLDiSXWdTrJQBIN9Fcyp7n4DhxJEiWNAJMV1/BqWfW/kkg71UDcHJyTQ==}
+
 snapshots:
 
   '@alloc/quick-lru@5.2.0': {}
 
-  '@anthropic-ai/sdk@0.126.0':
+  '@anthropic-ai/sdk@0.126.0(zod@4.4.3)':
     dependencies:
       json-schema-to-ts: 3.1.1
       standardwebhooks: 1.1.1
+    optionalDependencies:
+      zod: 4.4.3
 
   '@babel/runtime@7.29.7': {}
 
@@ -1490,6 +1524,11 @@ snapshots:
 
   baseline-browser-mapping@2.10.23: {}
 
+  browser-use-sdk@3.11.3:
+    dependencies:
+      dotenv: 17.4.2
+      zod: 4.4.3
+
   caniuse-lite@1.0.30001791: {}
 
   client-only@0.0.1: {}
@@ -1497,6 +1536,8 @@ snapshots:
   csstype@3.2.3: {}
 
   detect-libc@2.1.2: {}
+
+  dotenv@17.4.2: {}
 
   enhanced-resolve@5.21.0:
     dependencies:
@@ -1631,6 +1672,8 @@ snapshots:
 
   picocolors@1.1.1: {}
 
+  playwright-core@1.63.0: {}
+
   postcss@8.4.31:
     dependencies:
       nanoid: 3.3.11
@@ -1753,3 +1796,5 @@ snapshots:
   undici-types@7.19.2: {}
 
   undici-types@8.9.0: {}
+
+  zod@4.4.3: {}

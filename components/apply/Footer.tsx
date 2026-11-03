@@ -3,11 +3,11 @@ import { applyFooterLinks, applySiteConfig } from "@/data/apply";
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-100 px-4 pb-28 pt-10 sm:px-6 md:pb-10 lg:px-10 lg:pb-14">
+    <footer className="border-t border-slate-100 px-4 pb-28 pt-10 sm:px-6 md:pb-28 lg:px-10">
       <div className="mx-auto flex max-w-[1280px] flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
         <div className="max-w-xl">
-          <div className="flex items-center gap-3">
-            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-16 w-auto" />
+          <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
+            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-10 w-auto sm:h-11" />
             <p className="text-xs text-slate-500">{applySiteConfig.name} · 무료 상세페이지 진단</p>
           </div>
           <p className="mt-5 text-[15px] leading-7 text-slate-600">{applySiteConfig.description}</p>

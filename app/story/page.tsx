@@ -44,7 +44,7 @@ export default function StoryPage() {
       <header className="border-b border-slate-200 px-5 py-5 sm:px-8">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-4">
           <a href="/" className="text-lg font-semibold tracking-[-0.03em] focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#004EE0]">
-            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-12 w-auto" priority />
+            <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-8 w-auto sm:h-9" priority />
           </a>
           <a href={diagnosisHref} className="rounded-lg bg-[#004EE0] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#003DB2] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#004EE0]">
             무료 진단 시작하기
@@ -180,7 +180,7 @@ export default function StoryPage() {
 
       <footer className="border-t border-slate-200 px-5 py-8 sm:px-8">
         <div className="mx-auto flex max-w-6xl flex-col gap-2 text-sm text-slate-500 sm:flex-row sm:justify-between">
-          <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-16 w-auto" />
+          <Image src="/logo%20final2.png" alt="상페닥터" width={1154} height={339} className="h-10 w-auto sm:h-11" />
           <a href="/" className="underline underline-offset-4 hover:text-slate-800">메인 페이지로 돌아가기</a>
         </div>
       </footer>

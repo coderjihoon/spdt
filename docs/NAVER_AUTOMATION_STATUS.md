@@ -25,20 +25,27 @@
 | Syphoon 네이버 상품 HTML API | 피쥬키 URL에 HTTP 200, 제목 `Sign in - NAVER`, 상세 컨테이너와 사전 로드된 상품 상태 없음 | HTTP 성공이어도 상품 본문이 아니므로 사용 불가 |
 | Syphoon 범용 JS 렌더링 API | 피쥬키 URL에 HTTP 200, 제목 `Sign in - NAVER`, 상세 컨테이너 없음 | JS 렌더링을 켜도 본문 수집 실패 |
 | Syphoon 네이버 상세 API 요청 | 첫 요청 60초 시간 초과, 재시도 HTTP 500, 상세 본문 없음 | 이 API 경로로 본문 수집 미검증 |
+| Syphoon 발급 NaverHTMLKey | 피쥬키 상품과 문서 예제 상품 모두 HTTP 401, `You are not authorized` | 공개 상품 HTML을 가져오지 못함. 키 권한 문제인지 공급자 측 설정 확인 필요 |
+| Syphoon 발급 NaverPDPKey 상품 API | HTTP 200, 상품 JSON 42,233자. `detailContents`는 `editorType`과 `excessDetailContentText: false`만 포함 | 상품 메타데이터는 수집하지만 판매자 상세 본문은 포함하지 않음 |
+| Syphoon PDP 본문 콘텐츠 API | HTTP 501, `Request failed. You won't be charged for this request` | 상세 본문 API 미지원 또는 요청 형식 불일치. 본문 수집 실패 |
+| 로그인 정보 없는 로컬 headless Chrome (`lib/smartstore`) | 2026-10-07 피쥬키 URL 시험에서 `BLOCKED` 반환 | 이 경로를 서버에 연결할 근거가 없음 |
 
 Cloudflare 응답과 Apify 표본은 로컬 `output/naver-server-probe/`에 저장했다.
 공급자 테스트에는 운영자 Chrome의 네이버 세션을 전달하지 않았다.
 이번 검증으로 운영 배포나 기존 일반 쇼핑몰 캡처 흐름을 변경하지 않았다.
 
 Apify 내부 검증용 비공개 Actor 소스는 `scripts/apify-nav-probe/`에 있다.
-Syphoon은 네이버 상품 HTML과 공개 API 요청을 제공한다고 문서화하고 있으며
-무료 월 100회 요금제를 표시한다. 제공받은 API 키로 실측했지만 위와 같이
-피쥬키 상세 본문은 확인하지 못했다. 로그인 화면을 상품으로 오인하거나
-이 서비스를 운영 수집기로 채택하지 않는다.
+Syphoon 신규 발급 키로 상품 API 파일럿을 수행했다. PDP 키는 상품 JSON을
+반환했지만 상세 본문은 없었고, HTML 키는 두 상품 URL에서 모두 권한 오류를
+반환했다. HTML 키는 Git에서 제외되는 `.env.local`에서 제거했다. 메일에 포함돼
+대화에 노출된 두 키는 재발급 또는 폐기를 권장한다. 시험 스크립트는 키를
+`.env.local`에서 읽고 응답 요약만 출력한다.
 
 ## 다음 진행 조건
 
-1. 실제 판매자 상세 본문까지 반환하는 서버 수집 서비스를 실증한다. Bright Data 계정은 비활성이고, Syphoon 무료 계정은 피쥬키에서 로그인 화면을 반환했다. 결제·요금제 변경은 실행하지 않았다.
+네이버 커머스API 담당자는 [타 스마트스토어 상품의 상세 본문을 추출하는 공식 API는 제공하지 않으며](https://github.com/commerce-api-naver/commerce-api/discussions/1900), 판매자용 애플리케이션은 본인 스토어 상품만 처리할 수 있다고 답했다. 따라서 고객의 임의 상품 URL만 받는 이 서비스는 커머스API만으로 구현할 수 없다.
+
+1. 실제 판매자 상세 본문까지 반환하는 서버 수집 서비스를 실증한다. Bright Data 계정은 비활성이고, Syphoon HTML 키는 권한 오류를, PDP 키는 메타데이터만 반환했다. 결제·요금제 변경은 실행하지 않았다.
 2. 실제 URL로 판매자 상세 본문의 텍스트와 이미지가 반환되는지 검증한다. 대표 이미지·상품 메타데이터만 반환하면 채택하지 않는다.
 3. 검증된 수집 방식을 서버 작업 대기열에 연결한다. 공급자 작업 ID, 상태 조회, 재시도, 시간 초과, 중복 완료 방지 및 본문 검증이 필요하다.
 4. 텍스트 중심 본문과 다른 상품 배너를 포함하는 본문을 검증하고 기존 진단 엔진에 순서대로 전달한다.

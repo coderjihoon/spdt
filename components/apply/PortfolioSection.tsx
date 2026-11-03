@@ -1,4 +1,12 @@
-import { portfolioItems } from "@/data/site";
+import Image from "next/image";
+import Link from "next/link";
+
+const projects = [
+  { slug: "zeus", name: "ZEUS", title: "코골이 관리 웨어러블", description: "복잡한 작동 원리를 직관적으로 풀어낸 상세페이지." },
+  { slug: "deopocket", name: "데오포켓", title: "가정용 탈취제 리뉴얼", description: "탈취 성능과 감성적인 생활 장면을 함께 담았습니다." },
+  { slug: "myodam", name: "묘담", title: "키튼 건강스틱", description: "성장기 고양이의 영양 설계를 보호자의 언어로 전합니다." },
+  { slug: "sonkei", name: "소네키", title: "26FW 주얼리 컬렉션", description: "주얼리에 담긴 소망과 의미를 하나의 이야기로 연결했습니다." },
+];
 
 export function PortfolioSection() {
   return (
@@ -7,21 +15,26 @@ export function PortfolioSection() {
         <p className="text-[14px] font-medium tracking-[0.18em] text-slate-400">PORTFOLIO</p>
         <h2 id="portfolio-title" className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.04em] text-white sm:text-[44px] lg:text-[52px]">제품의 장점을, 고객의 구매 이유로.</h2>
         <p className="mt-5 max-w-[620px] text-[15px] leading-7 text-slate-300">제품마다 다른 문제를 살펴보고, 정보의 순서와 문장을 다듬은 작업을 모았습니다.</p>
-        <a href="/works" className="mt-6 inline-flex text-[14px] font-medium text-white underline decoration-[#99CAFF] decoration-2 underline-offset-4 transition hover:text-[#99CAFF]">전체 작업물 보기 →</a>
       </div>
-      <div className="portfolio-marquee overflow-hidden">
-        <div className="animate-portfolio-marquee flex w-max">
-          {[0, 1].map((copy) => (
-            <div key={copy} aria-hidden={copy === 1} className="flex shrink-0 gap-4 pr-4 lg:gap-8 lg:pr-8">
-              {portfolioItems.map((item) => (
-                <article key={item.category} className="w-[210px] shrink-0 md:w-[260px] lg:w-[330px]">
-                  <div className="h-[340px] rounded-[14px] bg-[#f1f3f9] md:h-[420px] lg:h-[540px] lg:rounded-[20px]" />
-                  <h3 className="mt-3 px-1 text-[16px] font-semibold leading-normal tracking-[-0.02em] text-white lg:mt-4 lg:text-[24px]">{item.category}</h3>
-                </article>
-              ))}
-            </div>
-          ))}
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2">
+        {projects.map((project) => (
+          <article key={project.slug} className="min-w-0">
+            <Link href={`/works/${project.slug}`} aria-label={`${project.name} ${project.title} 작업물 보기`} className="group relative block aspect-video overflow-hidden bg-[#f1f3f9] focus-visible:outline-2 focus-visible:-outline-offset-4 focus-visible:outline-white">
+              <Image src={`/works/${project.slug}/thumbnail-v2.webp`} alt={`${project.name} ${project.title}`} fill sizes="(min-width: 768px) 50vw, 100vw" className="object-cover" />
+              <div className="absolute inset-0 flex flex-col justify-end bg-black/50 px-5 py-5 text-white opacity-0 transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 motion-reduce:transition-none lg:px-8 lg:py-7 [@media(hover:none)]:opacity-100">
+                <h3 className="text-[22px] font-semibold leading-normal tracking-[-0.02em] lg:text-[30px]">{project.name}</h3>
+                <p className="mt-1 text-[14px] font-medium lg:text-[16px]">{project.title}</p>
+                <p className="mt-2 text-[13px] leading-6 text-white/85 lg:text-[15px]">{project.description}</p>
+              </div>
+            </Link>
+          </article>
+        ))}
+      </div>
+      <div className="mt-10 flex justify-center px-4 lg:mt-14">
+        <Link href="/works" className="inline-flex min-h-14 items-center justify-center gap-6 rounded-[12px] border border-white/60 px-8 text-[16px] font-medium text-white transition-colors hover:bg-white hover:text-[#111] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white motion-reduce:transition-none">
+          작업물 보러가기
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true"><path d="M4 12h16m-6-6 6 6-6 6" /></svg>
+        </Link>
       </div>
     </section>
   );

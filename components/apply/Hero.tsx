@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ChangeEvent, FormEvent, useRef, useState } from "react";
 import { useDiagnosisSubmit } from "./useDiagnosisSubmit";
 
@@ -21,9 +22,22 @@ export function Hero() {
 
   return (
     <section className="relative overflow-hidden px-4 pb-14 pt-12 sm:px-6 lg:px-10 lg:pb-24 lg:pt-20">
-      <div className="absolute inset-x-0 top-16 -z-10 h-[520px] bg-[radial-gradient(circle_at_center,rgba(24,131,255,0.17),transparent_62%)] blur-3xl" />
+      <div aria-hidden="true" className="hero-diagnostic-grid pointer-events-none absolute inset-0" />
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0">
+        <div className="absolute -left-[520px] -top-48 h-[800px] w-[800px] bg-[radial-gradient(circle,rgba(24,131,255,0.14),transparent_68%)] lg:-left-[400px]" />
+        <div className="absolute -right-[540px] top-[18%] h-[900px] w-[900px] bg-[radial-gradient(circle,rgba(132,119,255,0.12),transparent_68%)] lg:-right-[460px]" />
+        <div className="absolute -bottom-[420px] -left-[480px] h-[800px] w-[800px] bg-[radial-gradient(circle,rgba(66,194,255,0.13),transparent_68%)] lg:-left-[280px]" />
+      </div>
 
-      <div className="mx-auto flex max-w-[1280px] flex-col items-center gap-12 text-center">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-0 hidden lg:block">
+        {/* Iconora free previews: personal and commercial use. https://www.iconorastudio.com/ */}
+        <Image src="/hero-icons/bar-chart-glass.webp" alt="" width={320} height={320} className="hero-diagnostic-icon absolute -left-8 top-[17%] h-[220px] w-[220px] object-contain xl:-left-16 xl:h-80 xl:w-80" style={{ animationDelay: "-1s", rotate: "-7deg" }} />
+        <Image src="/hero-icons/revenue-glass.webp" alt="" width={180} height={180} className="hero-diagnostic-icon absolute -right-7 top-[12%] h-[180px] w-[180px] object-contain" style={{ animationDelay: "-3s", rotate: "6deg" }} />
+        <Image src="/hero-icons/wallet-glass.webp" alt="" width={240} height={240} className="hero-diagnostic-icon absolute bottom-[10%] left-[5%] hidden h-60 w-60 object-contain xl:block" style={{ animationDelay: "-5s", rotate: "8deg" }} />
+        <Image src="/hero-icons/cash-glass.webp" alt="" width={210} height={210} className="hero-diagnostic-icon absolute bottom-[4%] right-[6%] hidden h-[210px] w-[210px] object-contain xl:block" style={{ animationDelay: "-2s", rotate: "-9deg" }} />
+      </div>
+
+      <div className="relative mx-auto flex max-w-[1280px] flex-col items-center gap-12 text-center">
         <div className="flex flex-col items-center">
           <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">FREE DETAIL PAGE DIAGNOSIS</p>
           <h1 className="mt-5 max-w-[680px] text-[40px] font-medium leading-[1.02] tracking-[-0.055em] text-slate-950 [text-wrap:balance] sm:text-[56px] lg:text-[68px]">

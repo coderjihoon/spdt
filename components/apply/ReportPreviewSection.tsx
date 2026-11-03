@@ -25,9 +25,21 @@ const sampleProblems = [
 
 const sampleItems = [
   { name: "첫 화면 후킹", score: 2, note: "제품 이름만 있고 구매 이유가 없음" },
+  { name: "제품이 무엇인지 즉시 이해되는지", score: 5, note: "첫 화면의 제품명과 이미지로 제품 종류를 바로 알 수 있음" },
+  { name: "타깃 고객 명확성", score: 3, note: "사용 장면은 있지만 누구에게 필요한 제품인지 명확하지 않음" },
+  { name: "핵심 구매 이유", score: 3, note: "핵심 효과가 첫 화면이 아닌 중간 설명에 제시됨" },
+  { name: "고객 문제와의 연결", score: 4, note: "사용 전 불편함과 제품 사용 후 변화를 함께 설명함" },
+  { name: "셀링포인트 구체성", score: 4, note: "주요 기능을 사용 장면과 함께 구체적으로 설명함" },
+  { name: "경쟁 제품 대비 차별점", score: 4, note: "비교표에서 기존 제품과의 기능 차이를 보여줌" },
   { name: "카피 설득력", score: 2, note: "장점 나열 위주, 고객 언어로 재구성 필요" },
-  { name: "공신력 근거", score: 1, note: "인증·후기가 페이지 하단에만 위치" },
+  { name: "정보 순서·구매 안내", score: 3, note: "기능 설명 뒤에 구매 이유가 나와 정보 순서 조정이 필요함" },
+  { name: "가격·혜택 제시", score: 4, note: "가격 안내에서 판매가와 적용 가능한 혜택을 함께 보여줌" },
+  { name: "공신력 근거(인증·수치)", score: 1, note: "인증 자료가 하단에만 있고 관련 효과 설명과 떨어져 있음" },
+  { name: "후기·리뷰", score: 4, note: "하단에 사용 사진과 구체적인 후기가 있으나 가격 근처에도 배치하면 좋음" },
+  { name: "반품·교환 등 구매 불안 해소", score: 5, note: "구매 안내에 반품·교환 조건과 문의 방법을 명확히 제시함" },
   { name: "CTA", score: 3, note: "버튼은 명확하나 문구가 일반적" },
+  { name: "디자인 가독성", score: 4, note: "제목과 본문 구분이 명확하고 섹션 사이 여백이 충분함" },
+  { name: "모바일 가독성", score: 4, note: "모바일 화면에서 본문과 제품 이미지가 잘 읽힘" },
 ];
 
 function itemStatus(score: number) {
@@ -48,18 +60,21 @@ function Card({ title, children }: { title: string; children: React.ReactNode })
 export function ReportPreviewSection() {
   return (
     <section id="report-preview" className="px-4 py-14 sm:px-6 lg:px-10 lg:py-24">
-      <div className="mx-auto max-w-[880px]">
-        <div className="text-center">
+      <div className="mx-auto grid max-w-[1280px] gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="lg:sticky lg:top-28">
           <p className="text-[14px] font-medium tracking-[0.18em] text-slate-500">REPORT PREVIEW</p>
-          <h2 className="mt-3 text-[32px] font-medium leading-[1.1] tracking-[-0.05em] text-slate-950 sm:text-[40px]">
-            실제 진단서는 이렇게 도착합니다.
+          <h2 className="mt-3 text-[38px] font-medium leading-[1.08] tracking-[-0.05em] text-slate-950 sm:text-[44px] lg:text-[52px]">
+            실제 진단서는<br />이렇게 도착합니다.
           </h2>
-          <p className="mx-auto mt-4 max-w-[480px] text-[15px] leading-7 text-slate-600">
-            아래는 예시로 만든 진단서입니다. 실제 점수와 지적 내용은 상세페이지 상태에 따라 매번 다르게 나오며, 신청하시면 이 형식 그대로 결과 페이지가 발급됩니다.
+          <p className="mt-5 max-w-[480px] text-[16px] leading-7 text-slate-600">
+            상세페이지의 문제와 개선 방향을 한눈에 확인하세요.
           </p>
+          <a href="#diagnosis-form" className="mt-7 inline-flex items-center justify-center rounded-[12px] bg-[#004EE0] px-7 py-4 text-[12px] font-medium text-white transition hover:bg-[#042E7B]">
+            내 상세페이지도 진단받기 →
+          </a>
         </div>
 
-        <div className="relative mt-10 rounded-[24px] p-3 ring-1 ring-inset ring-[#ececf4] sm:p-5" style={{ backgroundColor: "#F7F7F8" }}>
+        <div className="relative rounded-[24px] p-3 ring-1 ring-inset ring-[#ececf4] sm:p-5" style={{ backgroundColor: "#F7F7F8" }}>
           <span className="absolute -top-3 left-6 rounded-full bg-slate-900 px-3 py-1 text-[11px] font-medium tracking-[0.1em] text-white">
             SAMPLE
           </span>
@@ -110,6 +125,7 @@ export function ReportPreviewSection() {
               </Card>
 
               <Card title="항목별 진단">
+                <p className="mb-4 text-[12px] leading-6" style={{ color: T.sub }}>전체 16개 항목 · 1~2점 보완 필요 · 3점 점검 필요 · 4~5점 잘 갖춰짐</p>
                 <div className="grid gap-x-8 gap-y-4 sm:grid-cols-2">
                   {sampleItems.map((it) => {
                     const status = itemStatus(it.score);
@@ -117,7 +133,7 @@ export function ReportPreviewSection() {
                       <div key={it.name}>
                         <div className="flex items-center justify-between gap-3">
                           <span className="text-[13px] font-medium" style={{ color: T.text }}>{it.name}</span>
-                          <span className="rounded-md px-2 py-0.5 text-[11px] font-medium" style={{ color: status.color, backgroundColor: status.background }}>{status.label}</span>
+                          <span className="shrink-0 rounded-md px-2 py-0.5 text-[11px] font-medium" style={{ color: status.color, backgroundColor: status.background }}>{it.score}/5 · {status.label}</span>
                         </div>
                         <p className="mt-1 text-[12px] leading-5" style={{ color: T.muted }}>{it.note}</p>
                       </div>
@@ -134,11 +150,6 @@ export function ReportPreviewSection() {
           </div>
         </div>
 
-        <div className="mt-8 text-center">
-          <a href="#diagnosis-form" className="inline-flex items-center justify-center rounded-[12px] bg-[#004EE0] px-7 py-4 text-[12px] font-medium text-white transition hover:bg-[#042E7B]">
-            내 상세페이지도 진단받기 →
-          </a>
-        </div>
       </div>
     </section>
   );
